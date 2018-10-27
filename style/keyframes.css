@@ -1,0 +1,71 @@
+/* animating scroll button */
+@keyframes scrollButtonBounce {
+  50% {
+    transform: translate(0, 4vh);
+  }
+
+  65% {
+    transform: translate(0, -0.3vh);
+  }
+
+  90% {
+    transform: translate(0, 1.3vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scrollButtonDown {
+  100% {
+    transform: translate(0, 54vh);
+  }
+}
+
+@keyframes scrollButtonBouncingArrow {
+  25% {
+    transform: translate(0, 0.8vh);
+  }
+
+  75% {
+    transform: translate(0, -0.8vh);
+  }
+}
+
+/* images appearing & disappearing */
+@keyframes imagesAppearingDown {
+  0% {
+    transform: translate(0, -70vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes imagesDisappearingDown {
+  100% {
+    transform: translate(0, 80vh);
+  }
+}
+
+@keyframes imagesDisappearingUp {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -80vh);
+  }
+}
+
+@keyframes imagesAppearingUp {
+  0% {
+    transform: translate(0, 80vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

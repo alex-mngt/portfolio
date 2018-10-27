@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Alex Mongeot</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Alex Mongeot">
+  <meta name="description" content="Alex Mongeot's Portfolio">
+  <link rel="stylesheet" href="./style/index.css" />
+  <link rel="stylesheet" href="./style/firstPage.css">
+  <link rel="stylesheet" href="./style/keyframes.css">
+  <link rel="stylesheet" href="./style/otherPages.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./style/fullpage.css" />
+  <script src="./script/index.js" type="text/javascript"></script>
+  <script src="./script/fullpage.extensions.min.js" type="text/javascript"></script>
+</head>
+
+<html>
+
+<body>
+
+  <header id="header">
+    <!-- Go to homepage-->
+    <a href="./index.html">Alex Mongeot</a>
+    <!-- Homepage menu-->
+    <nav>
+      <a href="./html/english/about.html">About</a>
+      <a href="./html/english/contact.html">Contact</a>
+    </nav>
+    <!-- Menu-->
+    <nav id="menu">
+      <ul>
+        <li> Photo </li>
+        <li> Video </li>
+        <li> Design </li>
+        <li> Web </li>
+        <li> About </li>
+        <li> Contact </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="fullpage">
+
+    <!-- First Page -->
+    <section id="firstPage" class="section">
+      <p>
+        works
+      </p>
+      <!-- Languages -->
+      <div class="languages">
+        <a href="./html/french/f_index.html">FR</a>
+        <a href="./index.html" id="selectedLang">EN</a>
+      </div>
+      <!-- previewed img pseudo boder -->
+      <svg id="border" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+        <path d="M496.5 4.5v492H4.5V4.5h492m4-4H.5v500h500V.5z" /></svg>
+      <!-- <div id="border">
+
+      </div> -->
+
+      <!-- Arrows + Progress bar -->
+      <div id="progBar">
+        <!-- up arrow -->
+        <i id="upArrow" class="material-icons">
+          keyboard_arrow_up
+        </i>
+        <!-- down arrow -->
+        <i id="downArrow" class="material-icons">
+          keyboard_arrow_down
+        </i>
+        <svg id="emptyBar" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 1500">
+          <path d="M.2 0v1500h100V0H.2zm66.6 928.6c0 9.1-7.5 16.6-16.6 16.6-9.2 0-16.6-7.5-16.6-16.6V571.4c0-9.2 7.5-16.6 16.6-16.6 4.6 0 8.8 1.9 11.8 4.9s4.8 7.2 4.8 11.7v357.2z" fill="#e9e9e9" />
+          <path d="M50.2 945.2c-9.2 0-16.6-7.5-16.6-16.6V571.4c0-9.2 7.5-16.6 16.6-16.6 9.2 0 16.6 7.5 16.6 16.6v357.2c0 9.1-7.5 16.6-16.6 16.6z" fill="none" stroke="#000" stroke-width="4" stroke-miterlimit="10" /></svg>
+        <svg id="fullBar" class="runProgBarAnim" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 500">
+          <path fill="#fff" d="M33 43h35v414H33z" /></svg>
+      </div>
+
+      <!-- Scroll down button -->
+      <svg id="moveDown" class="svgScroll, bouncingButton" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+        <circle cx="250" cy="250" r="204" fill="#ffd42f" />
+        <path class="scrollPath" d="M249.6 294.52h.17a6.58 6.58 0 0 0 4.93-2.3l.05-.06L304 249.82a6.65 6.65 0 0 0 .7-9.36 6.64 6.64 0 0 0-9.35-.71l-45.75 39.34-45.74-39.34a6.66 6.66 0 0 0-9.36.71 6.66 6.66 0 0 0 .71 9.36l49.24 42.34.05.06a6.6 6.6 0 0 0 4.93 2.3z"
+          fill="#fff" /></svg>
+
+      <!--Abercrombie 1st page preview-->
+      <article id="selectedPreview">
+        <p class="category">
+          PHOTOGRAPHY
+        </p>
+        <img src="./media/photos/miniatures/abercrombie_miniature-@1x.jpg" alt="Thumbnail of a photograph of an Abercrombie shop" srcset="./media/photos/miniatures/abercrombie_miniature-@2x.jpg 2x,
+                  ./media/photos/miniatures/abercrombie_miniature-@1x.jpg 1x" />
+        <div class="prevInfo">
+          <p>
+            Project
+          </p>
+          <p>
+            Abercrombie
+          </p>
+          <p>
+            Date
+          </p>
+          <p>
+            2016
+          </p>
+        </div>
+        <div class="pageNumber">
+          <p>
+            1/5
+          </p>
+        </div>
+        <p class="seeMore"> See more </p>
+      </article>
+
+      <!--Sweet Nightmare 1st page preview -->
+      <article>
+        <p class="category">
+          VIDEO
+        </p>
+        <img src="./media/photos/miniatures/sweet_nightmare.gif" alt="Thumbnail of a man who walks" />
+        <div class="prevInfo">
+          <p>
+            Project
+          </p>
+          <p>
+            Sweet Nightmare
+          </p>
+          <p>
+            Date
+          </p>
+          <p>
+            2017
+          </p>
+        </div>
+        <div class="pageNumber">
+          <p>
+            2/5
+          </p>
+        </div>
+        <p class="seeMore"> See More </p>
+      </article>
+
+      <!--Memorial 1st page preview-->
+      <article>
+        <p class="category">
+          PHOTOGRAPHY
+        </p>
+        <img src="./media/photos/miniatures/memorial_miniature-@1x.jpg" alt="Thumbnail of a photograph of the eternal flame on the unknown soldier tomb" srcset="./media/photos/miniatures/memorial_miniature-@2x.jpg 2x,
+                  ./media/photos/miniatures/memorial_miniature-@1x.jpg 1x" />
+        <div class="prevInfo">
+          <p>
+            Project
+          </p>
+          <p>
+            Memorial
+          </p>
+          <p>
+            Date
+          </p>
+          <p>
+            2016
+          </p>
+        </div>
+        <div class="pageNumber">
+          <p>
+            3/5
+          </p>
+        </div>
+        <p class="seeMore"> See More </p>
+      </article>
+
+      <!-- Petite Fin 1st page preview -->
+      <article>
+        <p class="category">
+          DESIGN
+        </p>
+        <img src="./media/photos/miniatures/petite_fin_miniature-1x.jpg" alt="Thumbnail of a photograph of a food deliver on bike" srcset="./media/photos/miniatures/petite_fin_miniature-@2x.jpg 2x, ./media/photos/miniatures/petite_fin_miniature-1x.jpg 1x" />
+        <div class="prevInfo">
+          <p>
+            Project
+          </p>
+          <p>
+            Petite fin
+          </p>
+          <p>
+            Date
+          </p>
+          <p>
+            2018
+          </p>
+        </div>
+        <div class="pageNumber">
+          <p>
+            4/5
+          </p>
+        </div>
+        <p class="seeMore"> See More </p>
+      </article>
+      <!-- Dijon Gym Art' 1st page preview -->
+      <article>
+        <p class="category">
+          WEBDESIGN
+        </p>
+        <img src="./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg" alt="Thumbnail of a photograph of woman's hand on asymmetric bars" srcset="./media/photos/miniatures/dijon_gym_art_miniature-@2x.jpg 2x, ./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg 1x" />
+        <div class="prevInfo">
+          <p>
+            Project
+          </p>
+          <p>
+            Dijon Gym Art'
+          </p>
+          <p>
+            Date
+          </p>
+          <p>
+            2018
+          </p>
+        </div>
+        <div class="pageNumber">
+          <p>
+            5/5
+          </p>
+        </div>
+        <p class="seeMore"> See More </p>
+      </article>
+
+    </section>
+
+    <section class="section selectedSection">
+      <article class="section">
+        <p>
+          Photography for ABERCROMBIE
+        </p>
+        <p>
+          "ABERCROMBIE"
+        </p>
+        <p>
+          New-York, New-York USA
+        </p>
+        <p>
+          2017
+        </p>
+      </article>
+      <article class="section">
+        <img src="./media/photos/illustrations/abercrombie-@1x.jpg" alt="Photograph of an Abercrombie shop" srcset="./media/photos/illustrations/abercrombie-@2x.jpg 2x, ./media/photos/illustrations/abercrombie-@1x.jpg 1x">
+        <div>
+          <p>Objective</p>
+          <p>
+            This picture was taken for the famous brand Abercrombie&Fitch as part of a photography competition.
+          </p>
+          <p>
+            The objective was to transpose the special atmosphere of their store which made the fame of this brand.
+          </p>
+        </div>
+      </article>
+      <article class="section ">
+        <div>
+          <p>Details</p>
+          <p>
+            The picture has been shot in their New-York store so I had to compose with the environment;
+          </p>
+          <p>On one hand the picture should have been better with some additional lights and a real studio setup but on the other, the fact that I took this picture "Spontaneously" allows to bring more authenticity to the picture.
+          </p>
+          <p>Concerning the composition, I asked my models to came into this stairwell which is architecturally pretty interesting. It may be the heritage of the ancient building which have been carefully restored by the firm to fit in their
+            artistic direction.
+          </p>
+          <p>
+            In post production I added some grain to remind the analog photography which match pretty well with the vintage style of the place.
+          </p>
+        </div>
+        <img src="./media/photos/illustrations/abercrombie_store-@1x.jpg" alt="Photograph of an Abercrombie front window" srcset="./media/photos/illustrations/abercrombie_store-@2x.jpg 2x, ./media/photos/illustrations/abercrombie_store-@1x.jpg" />
+      </article>
+    </section>
+    <section class="section">
+      <article class="section">
+        <p>
+          Video project
+        </p>
+        <p>
+          "SWEET NIGHTMARE"
+        </p>
+        <p>
+          Dijon, Bourgogne France
+        </p>
+        <p>
+          2017
+        </p>
+      </article>
+      <article class="section">
+        <p>test</p>
+      </article>
+      <article class="section">
+        <p>test</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="section">
+        <p>
+          Photography project
+        </p>
+        <p>
+          "MEMORIAL"
+        </p>
+        <p>
+          Arrington, Virginia USA
+        </p>
+        <p>
+          2017
+        </p>
+      </article>
+      <article class="section">
+        <p>test</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="section">
+        <p>
+          Corporate identity for PETITE FAIM
+        </p>
+        <p>
+          "PETITE FAIM"
+        </p>
+        <p>
+          Dijon, Bourgogne France
+        </p>
+        <p>
+          2018
+        </p>
+      </article>
+      <article class="section">
+        <p>test</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="section">
+        <p>
+          Website for DIJON GYM'ART
+        </p>
+        <p>
+          "DIJON GYM'ART"
+        </p>
+        <p>
+          Dijon, Bourgogne France
+        </p>
+        <p>
+          2018
+        </p>
+      </article>
+    </section>
+    <div id="homeButton">
+      <svg id="monogramme" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 806.44 806.43">
+        <defs>
+          <style>
+            .cls-3 {
+              fill: none
+            }
+
+            .cls-4 {
+              fill: #fff
+            }
+          </style>
+        </defs>
+        <g id="Calque_2" data-name="Calque 2">
+          <path class="cls-3" d="M170.72 728.43h140.63L728.02 78H587.4L170.72 728.43z" />
+          <path class="cls-3" d="M843.13 423.5H426.37v650.44h.09zm-352.79 65.68a3 3 0 0 1 3-3H720a3 3 0 0 1 2.52 4.62l-46.12 72a3 3 0 0 1-2.52 1.38H493.34a3 3 0 0 1-3-3zm-.16 142.15a3 3 0 0 1 3-3h135.69a3 3 0 0 1 2.52 4.61l-135.68 211.9a3 3 0 0 1-5.53-1.61z"
+            transform="translate(-348.37 -345.5)" />
+          <path class="cls-3" d="M728.43 78.22V78h-.34l.34.22z" />
+          <path class="cls-3" d="M752.34 1073.94h324.46V567.46zm258.16-59.1H874a3 3 0 0 1-2.52-4.62l136.21-211.56a3 3 0 0 1 5.53 1.62l.28 211.56a3 3 0 0 1-3 3z" transform="translate(-348.37 -345.5)" />
+          <path class="cls-4" d="M348.37 345.5v806.44h806.43V345.5zm728.43 78.22l-.34-.22h.34zm-.41-.22l-416.68 650.44H519.09L935.77 423.5zm-650 0h416.74l-416.67 650.44h-.09zm326 650.44l324.41-506.48v506.48z" transform="translate(-348.37 -345.5)" />
+          <path class="cls-4" d="M1007.69 798.66l-136.21 211.56a3 3 0 0 0 2.52 4.62h136.5a3 3 0 0 0 3-3l-.28-211.56a3 3 0 0 0-5.53-1.62zM495.71 844.84l135.68-211.9a3 3 0 0 0-2.52-4.61H493.18a3 3 0 0 0-3 3v211.9a3 3 0 0 0 5.53 1.61zM493.34 564.18h180.49a3 3 0 0 0 2.52-1.38l46.12-72a3 3 0 0 0-2.52-4.62H493.34a3 3 0 0 0-3 3v72a3 3 0 0 0 3 3z"
+            transform="translate(-348.37 -345.5)" />
+        </g>
+      </svg>
+      <svg id="homeIcon" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M10 19v-5h4v5a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h1.7a.5.5 0 0 0 .33-.87L12.67 3.6a1 1 0 0 0-1.34 0L3 11.13a.5.5 0 0 0 .3.87H5v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1z" fill="#fff" /></svg>
+    </div>
+
+  </main>
+  <footer>
+
+  </footer>
+
+  <script>
+    new fullpage('#fullpage', {
+
+      //options here
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      fixedElements: '#header',
+      verticalCentered: false,
+      autoScrolling: false
+
+    });
+  </script>
+</body>
+
+</html>

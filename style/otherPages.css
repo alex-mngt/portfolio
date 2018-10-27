@@ -1,0 +1,89 @@
+section:nth-of-type(n+2)>article:first-of-type>div {
+  flex-direction: column;
+  justify-content: center;
+}
+
+section:nth-of-type(n+2)>article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Before collapsing the all fullpage.js process */
+section:nth-of-type(n+2)>article:first-of-type>p {
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 3.8vw;
+  margin-left: 14vw;
+}
+
+/* After collapsing the all fullpage.js process, these two css declaation must be the same to provide a fluid animation */
+section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p {
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 3.8vw;
+  margin-left: 14vw;
+}
+
+#fullpage>article>div {
+  display: flex;
+}
+
+/* third page css */
+#fullpage>article>div>img {
+  height: 92vh;
+  align-self: flex-end;
+}
+
+#fullpage>article>div>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#fullpage>article>div>div>p {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-family: 'HelveticaNeue-Medium', sans-serif;
+}
+
+#fullpage>article:nth-of-type(2)>div>div>p {
+  line-height: 7.5vh;
+  font-size: 2.6vw;
+}
+
+#fullpage>article:nth-of-type(3)>div>div>p {
+  font-size: 1.8vw;
+}
+
+#fullpage>article:nth-of-type(3)>div>div>p:nth-of-type(n+2) {
+  margin-bottom: 3vh;
+}
+
+#fullpage>article>div>div>p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+#fullpage>article:nth-of-type(3)>div>div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#fullpage>article>div>div>p:first-of-type {
+  font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 3.4vw;
+  text-align: center;
+}
+
+#fullpage>article:nth-of-type(2)>div>div>p:first-of-type {
+  margin-bottom: 8vh;
+}
+
+#fullpage>article:nth-of-type(3)>div>div>p:first-of-type {
+  margin-bottom: 5vh;
+}
+
+#fullpage>article:nth-of-type(2)>div>div>p:nth-of-type(2) {
+  margin-bottom: 8.5vh;
+}
