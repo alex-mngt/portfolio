@@ -43,7 +43,7 @@ window.onload = function() {
   // function redirection on click
   function goToHomePage(elmnt) {
     $(document).on('click', elmnt, function() {
-      window.location.href = "file:///Users/alexmongeot/Documents/Development/Portfolio%20in%20progress/index.html";
+      location.reload();
     });
   }
 
