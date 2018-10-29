@@ -111,6 +111,7 @@ section:first-of-type>article {
   font-family: 'Museo Sans Cyrl 700';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url(../media/fonts/museo_sans_700/MuseoSansCyrl_2.woff) format('woff');
 }
 
@@ -122,6 +123,7 @@ section:first-of-type>article {
     url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.woff') format('woff'),
     url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.ttf') format('truetype');
   font-weight: bold;
+  font-display: swap;
   font-style: normal;
 }
 
@@ -133,10 +135,12 @@ section:first-of-type>article {
     url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.woff') format('woff'),
     url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.ttf') format('truetype');
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Museo Sans 500';
+  font-display: swap;
   src: url(../media/fonts/museo_sans_500/OpenType/MuseoSans_500.ttf) format('truetype');
 }

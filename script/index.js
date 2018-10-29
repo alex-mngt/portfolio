@@ -53,20 +53,20 @@ window.onload = function() {
   function movePreviewOnClick(elmnt) {
     $(document).on('click', elmnt, function() {
       if (elmnt == "#upArrow") {
-        console.log('imageUp');
-        $('#selectedPreview > img').css("animation", "imagesDisappearingUp 0.5s ease-in forwards");
+        $('#selectedPreview > img, #selectedPreview > video').css("animation", "imagesDisappearingUp 0.5s ease-in forwards");
         setTimeout(function() {
+          console.log('imageUp');
           currentPreview += 1;
-          moveSelectedPreview(currentPreview);
-          $('#selectedPreview>img').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
+          nextPreview(currentPreview);
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
         }, 500);
       } else if (elmnt == "#downArrow") {
         console.log('imageDown');
-        $('#selectedPreview>img').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
+        $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
         setTimeout(function() {
           currentPreview -= 1;
-          moveSelectedPreview(currentPreview);
-          $('#selectedPreview>img').css("animation", "imagesAppearingDown 0.5s ease-out forwards");
+          nextPreview(currentPreview);
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.5s ease-out forwards");
         }, 500);
       }
       seconds = 0;
@@ -109,16 +109,16 @@ window.onload = function() {
       seconds += 0.5;
       console.log(seconds);
       if (seconds == 3.5) {
-        $('#selectedPreview>img').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
+        $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
       } else if (seconds == 4) {
         currentPreview += 1;
         if (currentPreview < nbSection) {
           nextPreview(currentPreview);
-          $('#selectedPreview>img').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
         } else {
           currentPreview = 0;
           nextPreview(currentPreview);
-          $('#selectedPreview>img').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
         }
         seconds = 0;
       }

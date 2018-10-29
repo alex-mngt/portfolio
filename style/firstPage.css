@@ -124,7 +124,8 @@ svg#fullBar {
 }
 
 /* image previewed */
-#selectedPreview>img:first-of-type {
+#selectedPreview>img:first-of-type,
+#selectedPreview>video {
   -webkit-backface-visibility: hidden;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -132,6 +133,7 @@ svg#fullBar {
   justify-self: end;
   z-index: 2;
   width: 35vw;
+  height: 35vw;
   border: solid 0.2vw black;
   box-sizing: border-box;
 }

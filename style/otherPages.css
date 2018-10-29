@@ -10,7 +10,7 @@ section:nth-of-type(n+2)>article:first-of-type {
 }
 
 /* Before collapsing the all fullpage.js process */
-section:nth-of-type(n+2)>article:first-of-type>p {
+section:nth-of-type(n+2)>article:first-of-type>p, section:nth-of-type(n+2)>article:first-of-type>h1 {
   font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 3.8vw;
@@ -18,7 +18,7 @@ section:nth-of-type(n+2)>article:first-of-type>p {
 }
 
 /* After collapsing the all fullpage.js process, these two css declaation must be the same to provide a fluid animation */
-section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p {
+section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>h1 {
   font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 3.8vw;
@@ -49,14 +49,14 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p {
 
 #fullpage>article:nth-of-type(2)>div>div>p {
   line-height: 7.5vh;
-  font-size: 2.6vw;
+  font-size: 2.4vw;
 }
 
 #fullpage>article:nth-of-type(3)>div>div>p {
   font-size: 1.8vw;
 }
 
-#fullpage>article:nth-of-type(3)>div>div>p:nth-of-type(n+2) {
+#fullpage>article:nth-of-type(3)>div>div>p {
   margin-bottom: 3vh;
 }
 
@@ -69,21 +69,32 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p {
   text-justify: inter-word;
 }
 
-#fullpage>article>div>div>p:first-of-type {
+#fullpage>article>div>div>h1 {
   font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 3.4vw;
   text-align: center;
 }
 
-#fullpage>article:nth-of-type(2)>div>div>p:first-of-type {
-  margin-bottom: 8vh;
+#fullpage>article:nth-of-type(2)>div>div>h1 {
+  margin-bottom: 7vh;
 }
 
-#fullpage>article:nth-of-type(3)>div>div>p:first-of-type {
+#fullpage>article:nth-of-type(3)>div>div>h1 {
   margin-bottom: 5vh;
 }
 
-#fullpage>article:nth-of-type(2)>div>div>p:nth-of-type(2) {
-  margin-bottom: 8.5vh;
+#fullpage>article:nth-of-type(2)>div>div>p:first-of-type {
+  margin-bottom: 7vh;
+}
+
+section:nth-of-type(3)>article:nth-of-type(2)>div {
+  display: flex;
+  justify-content: center;
+}
+
+section:nth-of-type(3)>article:nth-of-type(2)>div>iframe {
+  align-self: center;
+  width: 70vw;
+  height: 40vw;
 }
