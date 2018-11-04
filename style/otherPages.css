@@ -1,4 +1,5 @@
 section:nth-of-type(n+2)>article:first-of-type>div {
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -9,11 +10,12 @@ section:nth-of-type(n+2)>article:first-of-type {
   justify-content: center;
 }
 
+/* Presentation section  */
 /* Before collapsing the all fullpage.js process */
 section:nth-of-type(n+2)>article:first-of-type>p, section:nth-of-type(n+2)>article:first-of-type>h1 {
   font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
-  font-size: 3.8vw;
+  font-size: 3.5em;
   margin-left: 14vw;
 }
 
@@ -21,15 +23,16 @@ section:nth-of-type(n+2)>article:first-of-type>p, section:nth-of-type(n+2)>artic
 section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>h1 {
   font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
-  font-size: 3.8vw;
+  font-size: 3.5em;
   margin-left: 14vw;
 }
 
-#fullpage>article>div {
+/* general formatting */
+#fullpage>article:nth-of-type(n+2)>div {
   display: flex;
+  justify-content: space-between;
 }
 
-/* third page css */
 #fullpage>article>div>img {
   height: 92vh;
   align-self: flex-end;
@@ -39,6 +42,9 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-o
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 60vw;
+  height: 92vh;
+  align-self: flex-end;
 }
 
 #fullpage>article>div>div>p {
@@ -47,21 +53,22 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-o
   font-family: 'HelveticaNeue-Medium', sans-serif;
 }
 
-#fullpage>article:nth-of-type(2)>div>div>p {
-  line-height: 7.5vh;
-  font-size: 2.4vw;
-}
-
-#fullpage>article:nth-of-type(3)>div>div>p {
-  font-size: 1.8vw;
-}
-
-#fullpage>article:nth-of-type(3)>div>div>p {
-  margin-bottom: 3vh;
-}
-
 #fullpage>article>div>div>p:last-of-type {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
+}
+
+#fullpage>article:nth-of-type(2)>div>div>p {
+  line-height: 6.5vh
+}
+
+/* Abercrombie  */
+section:nth-of-type(2)>article:nth-of-type(2)>div>div>p {
+  font-size: 2em;
+}
+
+section:nth-of-type(2)>article:nth-of-type(3)>div>div>p {
+  font-size: 1.5em;
+  margin-bottom: 3vh;
 }
 
 #fullpage>article:nth-of-type(3)>div>div {
@@ -72,22 +79,27 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-o
 #fullpage>article>div>div>h1 {
   font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
-  font-size: 3.4vw;
+  font-size: 2.6em;
   text-align: center;
 }
 
-#fullpage>article:nth-of-type(2)>div>div>h1 {
+section:nth-of-type(2)>article:nth-of-type(2)>div>div>h1 {
   margin-bottom: 7vh;
 }
 
-#fullpage>article:nth-of-type(3)>div>div>h1 {
+section:nth-of-type(2)>article:nth-of-type(3)>div>div>h1 {
   margin-bottom: 5vh;
 }
 
-#fullpage>article:nth-of-type(2)>div>div>p:first-of-type {
+section:nth-of-type(2)>article:nth-of-type(2)>div>div>p:first-of-type {
   margin-bottom: 7vh;
 }
 
+section:nth-of-type(2)>article>div>div {
+  max-width: 65vw !important;
+}
+
+/* Dr Martens */
 section:nth-of-type(3)>article:nth-of-type(2)>div {
   display: flex;
   justify-content: center;
@@ -97,4 +109,27 @@ section:nth-of-type(3)>article:nth-of-type(2)>div>iframe {
   align-self: center;
   width: 70vw;
   height: 40vw;
+}
+
+/* petite faim  */
+section:nth-of-type(5)>article:nth-of-type(2)>div>div>p {
+  font-size: 1.8em;
+}
+
+section:nth-of-type(5)>article:nth-of-type(2)>div>div>h1 {
+  margin-bottom: 5vh;
+}
+
+section:nth-of-type(5)>article:nth-of-type(2)>div>div>p:first-of-type {
+  margin-bottom: 5vh;
+}
+
+section:nth-of-type(5)>article:nth-of-type(3)>div>div>h1 {
+  margin-bottom: 5vh;
+}
+
+section:nth-of-type(5)>article:nth-of-type(3)>div>div>p,
+section:nth-of-type(5)>article:nth-of-type(4)>div>div>p {
+  font-size: 1.5em;
+  margin-bottom: 3vh;
 }

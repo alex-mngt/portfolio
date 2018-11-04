@@ -56,7 +56,7 @@ window.onload = function() {
         $('#selectedPreview > img, #selectedPreview > video').css("animation", "imagesDisappearingUp 0.5s ease-in forwards");
         setTimeout(function() {
           console.log('imageUp');
-          currentPreview += 1;
+          currentPreview -= 1;
           nextPreview(currentPreview);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
         }, 500);
@@ -64,7 +64,7 @@ window.onload = function() {
         console.log('imageDown');
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
         setTimeout(function() {
-          currentPreview -= 1;
+          currentPreview += 1;
           nextPreview(currentPreview);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.5s ease-out forwards");
         }, 500);
@@ -94,6 +94,13 @@ window.onload = function() {
   }
 
   function moveSelectedSection(e) {
+    console.log(e);
+    if (e < 0) {
+      e = nbSection - 1;
+    } else if (e >= nbSection) {
+      e = 0;
+    }
+    currentPreview = e;
     $(".selectedSection").removeClass("selectedSection section fp-section");
     tabSection[e].setAttribute("class", "section selectedSection fp-section");
   }
@@ -107,7 +114,6 @@ window.onload = function() {
   setInterval(function() {
     if (firstPage) {
       seconds += 0.5;
-      console.log(seconds);
       if (seconds == 3.5) {
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
       } else if (seconds == 4) {
