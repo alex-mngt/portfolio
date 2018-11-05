@@ -17,9 +17,9 @@ window.onload = function() {
   //adding scroll down action
   function scrollOnClick(elmnt) {
     $(document).on('click', elmnt, function() {
+      $('#homeButton').css("opacity", "1");
       if (elmnt == "#moveDown") {
         $('#moveDown').css("animation", "scrollButtonDown 0.6s ease-out forwards");
-        $('#homeButton').css("opacity", "1");
       }
       setTimeout(function() {
         fullpage_api.moveSectionDown();
@@ -40,6 +40,37 @@ window.onload = function() {
     });
   }
 
+  // function change z-index to show the wanted picture
+  function changeIndex(elmnt) {
+    $(document).on('click', elmnt, function() {
+      if (elmnt == "#arthur") {
+        console.log("arthur");
+        $("#arthur").removeClass("background").addClass("foreground");
+        $("#arthur").css("z-index", "3");
+        $("#flamme").removeClass("foreground").addClass("background");
+        $("#flamme").css("z-index", "2");
+        $("#tombe").removeClass("foreground").addClass("background");
+        $("#tombe").css("z-index", "1");
+      } else if (elmnt == "#flamme") {
+        console.log("flamme");
+        $("#arthur").removeClass("foreground").addClass("background");
+        $("#arthur").css("z-index", "2");
+        $("#flamme").removeClass("background").addClass("foreground");
+        $("#flamme").css("z-index", "3");
+        $("#tombe").removeClass("foreground").addClass("background");
+        $("#tombe").css("z-index", "1");
+      } else if (elmnt == "#tombe") {
+        console.log("tombe");
+        $("#arthur").removeClass("foreground").addClass("background");
+        $("#arthur").css("z-index", "1");
+        $("#flamme").removeClass("foreground").addClass("background");
+        $("#flamme").css("z-index", "2");
+        $("#tombe").removeClass("background").addClass("foreground");
+        $("#tombe").css("z-index", "3");
+      }
+    });
+  }
+
   // function redirection on click
   function goToHomePage(elmnt) {
     $(document).on('click', elmnt, function() {
@@ -47,12 +78,11 @@ window.onload = function() {
     });
   }
 
-  goToHomePage("#homeButton");
 
   // Up & Down arrow move preview tabSection
   function movePreviewOnClick(elmnt) {
     $(document).on('click', elmnt, function() {
-      if (elmnt == "#upArrow") {
+      if (elmnt == "#firstPage .upArrow") {
         $('#selectedPreview > img, #selectedPreview > video').css("animation", "imagesDisappearingUp 0.5s ease-in forwards");
         setTimeout(function() {
           console.log('imageUp');
@@ -60,7 +90,7 @@ window.onload = function() {
           nextPreview(currentPreview);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
         }, 500);
-      } else if (elmnt == "#downArrow") {
+      } else if (elmnt == "#firstPage .downArrow") {
         console.log('imageDown');
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
         setTimeout(function() {
@@ -73,12 +103,23 @@ window.onload = function() {
     })
   }
 
-  movePreviewOnClick("#upArrow");
-  movePreviewOnClick("#downArrow");
+  //function calls
+
+  changeIndex("#flamme");
+  changeIndex("#arthur");
+  changeIndex("#tombe");
+
+  goToHomePage("#homeButton");
+
+
+  movePreviewOnClick("#firstPage .upArrow");
+  movePreviewOnClick("#firstPage .downArrow");
 
   scrollOnClick(".seeMore");
   scrollOnClick("#moveDown");
   scrollOnClick("#selectedPreview > img");
+  scrollOnClick("#selectedPreview > video");
+
 
   // functions
 

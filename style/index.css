@@ -7,6 +7,18 @@ a, a:active, a:visited {
   color: black;
 }
 
+h1 {
+  font-family: sans-serif;
+}
+
+#mailLink {
+  text-decoration: underline #FFD42F;
+}
+
+#mailLink:hover {
+  color: grey;
+}
+
 body {
   background-color: #e9e9e9;
   font-size: 17px;
@@ -81,16 +93,16 @@ section:first-of-type>article {
 }
 
 #homeButton:hover #monogramme {
-  opacity: 0;
-  display: none;
-}
-
-#homeButton:hover #homeIcon {
   opacity: 1;
   display: block;
 }
 
-#homeIcon {
+#homeButton:hover #homeIcon {
+  opacity: 0;
+  display: none;
+}
+
+#monogramme {
   opacity: 0;
   display: none;
   align-self: center;

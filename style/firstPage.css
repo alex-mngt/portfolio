@@ -64,35 +64,41 @@ div#progBar {
   grid-template-rows: 1fr 12vh 12vh 1fr;
 }
 
-#upArrow {
+.upArrow {
   transform-origin: 50% 50%;
   transition: transform .2s ease-out;
   font-size: 2.1vw;
+  margin-bottom: 2vw;
+}
+
+#firstPage .upArrow {
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: start;
   align-self: end;
-  margin-bottom: 2vw;
   margin-left: 1.4vw;
 }
 
-#downArrow {
+.downArrow {
   transform-origin: 50% 50%;
   transition: transform .2s ease-out;
   font-size: 2.1vw;
+  margin-top: 2vw;
+}
+
+#firstPage .downArrow {
   grid-column: 2/3;
   grid-row: 3/4;
   justify-self: start;
   align-self: start;
-  margin-top: 2vw;
   margin-left: 1.4vw;
 }
 
-#upArrow:hover {
+.upArrow:hover {
   transform: scale(1.1) translate(0, -1vh);
 }
 
-#downArrow:hover {
+.downArrow:hover {
   transform: scale(1.1) translate(0, 1vh);
 }
 

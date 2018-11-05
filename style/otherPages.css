@@ -61,16 +61,6 @@ section:nth-of-type(n+2)>article:first-of-type>div.fp-tableCell>p, section:nth-o
   line-height: 6.5vh
 }
 
-/* Abercrombie  */
-section:nth-of-type(2)>article:nth-of-type(2)>div>div>p {
-  font-size: 2em;
-}
-
-section:nth-of-type(2)>article:nth-of-type(3)>div>div>p {
-  font-size: 1.5em;
-  margin-bottom: 3vh;
-}
-
 #fullpage>article:nth-of-type(3)>div>div {
   text-align: justify;
   text-justify: inter-word;
@@ -81,6 +71,16 @@ section:nth-of-type(2)>article:nth-of-type(3)>div>div>p {
   font-weight: bold;
   font-size: 2.6em;
   text-align: center;
+}
+
+/* Abercrombie  */
+section:nth-of-type(2)>article:nth-of-type(2)>div>div>p {
+  font-size: 2em;
+}
+
+section:nth-of-type(2)>article:nth-of-type(3)>div>div>p {
+  font-size: 1.5em;
+  margin-bottom: 3vh;
 }
 
 section:nth-of-type(2)>article:nth-of-type(2)>div>div>h1 {
@@ -102,13 +102,81 @@ section:nth-of-type(2)>article>div>div {
 /* Dr Martens */
 section:nth-of-type(3)>article:nth-of-type(2)>div {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 
 section:nth-of-type(3)>article:nth-of-type(2)>div>iframe {
   align-self: center;
   width: 70vw;
   height: 40vw;
+}
+
+/* Memorial */
+section:nth-of-type(4)>article>div>div>img {
+  width: 53vw;
+  position: absolute;
+}
+
+section:nth-of-type(4)>article:nth-of-type(2)>div>div>p {
+  position: absolute;
+  bottom: 2vh;
+  width: 28vw;
+  margin-left: 3.5vw !important;
+}
+
+#tombe {
+  left: 17vw;
+  top: 3vw;
+  z-index: 1;
+  filter: blur(5px) opacity(0.75);
+  -webkit-filter: blur(5px) opacity(0.75);
+}
+
+#flamme {
+  left: 21vw;
+  top: 6vw;
+  z-index: 2;
+  filter: blur(5px) opacity(0.75);
+  -webkit-filter: blur(5px) opacity(0.75);
+}
+
+#arthur {
+  left: 25vw;
+  top: 9vw;
+  z-index: 3;
+}
+
+section:nth-of-type(4)>article:nth-of-type(2)>div {
+  justify-content: space-between !important;
+}
+
+/*
+uncomment when the slider process is created
+#sliderArrows {
+  margin-right: 10vw;
+} */
+section:nth-of-type(4)>article:nth-of-type(2)>div>div {
+  display: flex;
+  flex-direction: row !important;
+  max-width: 100vw !important;
+  width: 100vw;
+  position: relative;
+}
+
+section:nth-of-type(4)>article:nth-of-type(3)>div>div {
+  max-width: 100vw !important;
+  width: 100vw;
+}
+
+section:nth-of-type(4)>article:nth-of-type(3) p {
+  margin-right: 13vw !important;
+  margin-left: 13vw !important;
+  margin-bottom: 2.5vh;
+  font-size: 1.2em;
+}
+
+section:nth-of-type(4)>article:nth-of-type(3) h1 {
+  margin-bottom: 4vh;
 }
 
 /* petite faim  */
@@ -132,4 +200,15 @@ section:nth-of-type(5)>article:nth-of-type(3)>div>div>p,
 section:nth-of-type(5)>article:nth-of-type(4)>div>div>p {
   font-size: 1.5em;
   margin-bottom: 3vh;
+}
+
+/* styling classes */
+.foreground {
+  filter: blur(0) !important;
+  -webkit-filter: blur(0) !important;
+}
+
+.background {
+  filter: blur(5px) opacity(0.75) !important;
+  -webkit-filter: blur(5px) opacity(0.75) !important;
 }
