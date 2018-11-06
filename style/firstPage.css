@@ -160,6 +160,7 @@ svg#fullBar {
   padding-bottom: 4.1vw;
   padding-right: 4.8vw;
   z-index: 1;
+  stroke-width: 2.5px;
 }
 
 /* project information + grid */
@@ -188,6 +189,7 @@ div.prevInfo>p:nth-of-type(2n+1) {
 
 /* see more */
 .seeMore {
+  z-index: 6;
   cursor: pointer;
   grid-column: 5/6;
   grid-row: 2/3;
