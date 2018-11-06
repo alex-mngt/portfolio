@@ -1,0 +1,34 @@
+section {
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 2.6em;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+p {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-bottom: 3vh;
+  font-family: 'HelveticaNeue-Medium', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.03em;
+  text-align: justify;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+img {
+  width: 15vw;
+}
