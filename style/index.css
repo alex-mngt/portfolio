@@ -1,3 +1,4 @@
+/* ------------STATIC PART------------ */
 * {
   margin: 0;
 }
@@ -7,24 +8,12 @@ a, a:active, a:visited {
   color: black;
 }
 
-h1 {
-  font-family: sans-serif;
-}
-
-#mailLink {
-  text-decoration: underline #FFD42F;
-}
-
-#mailLink:hover {
-  color: grey;
-}
-
 body {
   background-color: #e9e9e9;
-  font-size: 17px;
-  font-family: 'Museo Sans Cyrl 700', sans-serif;
-  letter-spacing: 0.03em;
   color: black;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  font-family: 'Museo Sans Cyrl 700', sans-serif;
   /* disabling text highlighting */
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -69,6 +58,16 @@ section article {
 /* hidding unwanted previews */
 section:first-of-type>article {
   display: none;
+}
+
+/* hidding unwanted sections */
+section:nth-of-type(n+2) {
+  display: none;
+  z-index: 5;
+}
+
+.selectedSection {
+  display: block !important;
 }
 
 #homeButton {
@@ -116,6 +115,13 @@ section:first-of-type>article {
 #homeButton>svg {
   width: 2.3vw;
   transition: opacity .05s;
+}
+
+/* ------------RESPONSIVE------------ */
+@media all and (max-width: 575px) {
+  body {
+    font-size: 10px;
+  }
 }
 
 /* fonts */

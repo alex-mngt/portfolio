@@ -6,6 +6,7 @@ window.onload = function() {
   "use strict";
   // variables
   let firstPage = true;
+  let currentMemorial = 0;
   let currentPreview = 0;
   let seconds = 0;
   let nbSection = $("section:nth-of-type(n+2)").length;
@@ -13,6 +14,7 @@ window.onload = function() {
   // storage tables
   let tabPreview = document.querySelectorAll("section:first-of-type>article");
   let tabSection = document.querySelectorAll("body>main>section:nth-of-type(n+2)");
+  let tabMemorial = document.querySelectorAll("#memorialImages>div>img");
 
   //adding scroll down action
   function scrollOnClick(elmnt) {
@@ -41,32 +43,32 @@ window.onload = function() {
   }
 
   // function change z-index to show the wanted picture
-  function changeIndex(elmnt) {
+  function memorialPictures(elmnt) {
     $(document).on('click', elmnt, function() {
-      if (elmnt == "#arthur") {
-        console.log("arthur");
-        $("#arthur").removeClass("background").addClass("foreground");
-        $("#arthur").css("z-index", "3");
-        $("#flamme").removeClass("foreground").addClass("background");
-        $("#flamme").css("z-index", "2");
-        $("#tombe").removeClass("foreground").addClass("background");
-        $("#tombe").css("z-index", "1");
-      } else if (elmnt == "#flamme") {
-        console.log("flamme");
-        $("#arthur").removeClass("foreground").addClass("background");
-        $("#arthur").css("z-index", "2");
-        $("#flamme").removeClass("background").addClass("foreground");
-        $("#flamme").css("z-index", "3");
-        $("#tombe").removeClass("foreground").addClass("background");
-        $("#tombe").css("z-index", "1");
-      } else if (elmnt == "#tombe") {
-        console.log("tombe");
-        $("#arthur").removeClass("foreground").addClass("background");
-        $("#arthur").css("z-index", "1");
-        $("#flamme").removeClass("foreground").addClass("background");
-        $("#flamme").css("z-index", "2");
-        $("#tombe").removeClass("background").addClass("foreground");
-        $("#tombe").css("z-index", "3");
+      if (elmnt == "#memorialUpArrow") {
+        $(".displayedMemorial").css("animation", "fadeOut .5s ease-out");
+        currentMemorial += 1;
+        if (currentMemorial > 2) {
+          currentMemorial = 0;
+        }
+        setTimeout(function() {
+          console.log(currentMemorial);
+          $(".displayedMemorial").removeClass("displayedMemorial");
+          tabMemorial[currentMemorial].classList.add("displayedMemorial");
+          $(".displayedMemorial").css("animation", "fadeIn .5s ease-out");
+        }, 500);
+      } else if (elmnt == "#memorialDownArrow") {
+        $(".displayedMemorial").css("animation", "fadeOut .5s ease-out");
+        currentMemorial -= 1;
+        if (currentMemorial < 0) {
+          currentMemorial = 2;
+        }
+        setTimeout(function() {
+          console.log(currentMemorial);
+          $(".displayedMemorial").removeClass("displayedMemorial");
+          tabMemorial[currentMemorial].classList.add("displayedMemorial");
+          $(".displayedMemorial").css("animation", "fadeIn .5s ease-out");
+        }, 500);
       }
     });
   }
@@ -105,9 +107,8 @@ window.onload = function() {
 
   //function calls
 
-  changeIndex("#flamme");
-  changeIndex("#arthur");
-  changeIndex("#tombe");
+  memorialPictures("#memorialUpArrow");
+  memorialPictures("#memorialDownArrow");
 
   goToHomePage("#homeButton");
 

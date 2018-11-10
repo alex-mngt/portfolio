@@ -5,18 +5,20 @@ section {
   align-items: center;
 }
 
+header>nav {
+  justify-content: flex-end !important;
+  margin-right: 4vw;
+}
+
 h1 {
   font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 2.6em;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
+  margin: 4vh 0 4vh 0;
 }
 
 p {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  margin-bottom: 3vh;
+  margin: 0 4vw 3vh 4vw;
   font-family: 'HelveticaNeue-Medium', sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.03em;
@@ -31,4 +33,28 @@ main {
 
 img {
   width: 15vw;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  img {
+    width: 20vw;
+  }
+
+  h1 {
+    margin: 2vh 0 4vh 0;
+  }
+}
+
+@media all and (max-width: 575px) {
+  img {
+    width: 30vw;
+  }
+
+  h1 {
+    margin: 2vh 0 4vh 0;
+  }
 }

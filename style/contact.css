@@ -1,0 +1,7 @@
+#mailLink {
+  text-decoration: underline #FFD42F;
+}
+
+#mailLink:hover {
+  color: grey;
+}

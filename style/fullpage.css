@@ -8,15 +8,6 @@
  *
  * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
  */
-section:nth-of-type(n+2) {
-  display: none;
-  z-index: 5;
-}
-
-.selectedSection {
-  display: block !important;
-}
-
 html.fp-enabled,
 .fp-enabled body {
   margin: 0;

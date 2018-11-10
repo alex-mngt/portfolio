@@ -1,62 +1,63 @@
-/* animating scroll button */
+/* ANIMATING SCROLLING BUTTON */
 @keyframes scrollButtonBounce {
   50% {
-    transform: translate(0, 4vh);
+    transform: translate(0, 4vh) rotate(0.02deg);
   }
 
   65% {
-    transform: translate(0, -0.3vh);
+    transform: translate(0, -0.3vh) rotate(0.02deg);
   }
 
   90% {
-    transform: translate(0, 1.3vh);
+    transform: translate(0, 1.3vh) rotate(0.02deg);
   }
 
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0.02deg);
   }
 }
 
 @keyframes scrollButtonDown {
   100% {
-    transform: translate(0, 54vh);
+    transform: translate(0, 54vh) rotate(0.02deg);
   }
 }
 
 @keyframes scrollButtonBouncingArrow {
   25% {
-    transform: translate(0, 0.8vh);
+    transform: translate(0, 0.8vh) rotate(0.02deg);
   }
 
   75% {
-    transform: translate(0, -0.8vh);
+    transform: translate(0, -0.8vh) rotate(0.02deg);
   }
 }
 
-/* images appearing & disappearing */
+/* IMAGES APPEARING & DISAPPEARING */
+/* First page */
 @keyframes imagesAppearingDown {
-  0% {
-    transform: translate(0, -70vh);
+  from {
+    transform: translate3d(0, -70vh, 0);
   }
 
-  100% {
-    transform: translate(0, 0);
+  to {
+    transform: translate3d(0, 0, 0) rotate(0.02deg);
   }
 }
 
 @keyframes imagesDisappearingDown {
   100% {
-    transform: translate(0, 80vh);
+    transform: translate3d(0, 80vh, 0) rotate(0.02deg);
   }
 }
 
 @keyframes imagesDisappearingUp {
   0% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translate(0, -80vh);
+    transform: translate3d(0, -80vh, 0) rotate(0.02deg);
   }
 }
 
@@ -66,6 +67,31 @@
   }
 
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0.02deg);
+  }
+}
+
+/* Memorial */
+@keyframes fadeIn {
+  from {
+    filter: blur(10px) opacity(0);
+    -webkit-filter: blur(10px) opacity(0);
+  }
+
+  to {
+    filter: blur(0) opacity(1);
+    -webkit-filter: blur(0) opacity(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    filter: blur(0) opacity(1);
+    -webkit-filter: blur(0) opacity(1);
+  }
+
+  to {
+    filter: blur(10px) opacity(0);
+    -webkit-filter: blur(10px) opacity(0);
   }
 }
