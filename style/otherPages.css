@@ -1,29 +1,17 @@
 /* PRESENTATION SECTION  */
-/* Before collapsing the all fullpage.js process */
-section:nth-of-type(n+2)>article:first-of-type>p,
-section:nth-of-type(n+2)>article:first-of-type>h1 {
+/* Before & after collapsing the all fullpage.js process */
+.presentation>p,
+.presentation>h1,
+.presentation>div>p,
+.presentation>div>h1 {
   font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 3.5em;
   margin-left: 14vw;
 }
 
-section:nth-of-type(n+2)>article:first-of-type {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* After collapsing the all fullpage.js process, these two css declaation must be the same to provide a fluid animation */
-section:nth-of-type(n+2)>article:first-of-type>div>p,
-section:nth-of-type(n+2)>article:first-of-type>div>h1 {
-  font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
-  font-weight: bold;
-  font-size: 3.5em;
-  margin-left: 14vw;
-}
-
-section:nth-of-type(n+2)>article:first-of-type>div {
+.presentation,
+.presentation>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +60,8 @@ article>div>h1 {
   text-justify: inter-word;
 }
 
-#fullpage>article:nth-of-type(n+2)>div>div>h1 {
+#fullpage>article:nth-of-type(n+2)>div>div>h1,
+.titleSlide {
   font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
   font-size: 2.6em;
@@ -132,6 +121,7 @@ section:nth-of-type(2)>article>div>div {
 
 #memorialImages img {
   display: none;
+  width: 50vw;
 }
 
 #memorialExplanations>div>div {

@@ -34,6 +34,9 @@ window.onload = function() {
           new fullpage('#fullpage', {
             //options here
             licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+            loopHorizontal: false,
+            resetSliders: true,
+            slidesNavigation: true,
             fixedElements: '#header'
           });
           $('section:not(#fullpage)').css("display", "none");
