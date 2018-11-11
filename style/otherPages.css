@@ -55,7 +55,7 @@ article>div>h1 {
   line-height: 6.5vh
 }
 
-#fullpage>article:nth-of-type(3)>div>div {
+#fullpage>article>div>div {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -80,29 +80,30 @@ article>div>h1 {
 }
 
 /* Abercrombie  */
-section:nth-of-type(2)>article>div>div {
+section:nth-of-type(2)>article>div>div,
+section:nth-of-type(3)>article>div>div {
   max-width: 65vw !important;
 }
 
 /* Dr Martens */
-#martensIframe>div {
+.martensIframe>div {
   display: flex;
   justify-content: center !important;
 }
 
-#martensIframe>div>iframe {
+.martensIframe>div>iframe {
   align-self: center;
   width: 70vw;
   height: 40vw;
 }
 
 /* Memorial */
-#memorialImages>div {
+.memorialImages>div {
   display: flex;
   align-items: center;
 }
 
-#memorialImages>div>div:first-of-type {
+.memorialImages>div>div:first-of-type {
   max-width: 92vw !important;
   width: 92vw;
   height: 92vh;
@@ -119,18 +120,25 @@ section:nth-of-type(2)>article>div>div {
   display: block !important;
 }
 
-#memorialImages img {
+.memorialImages img {
   display: none;
   width: 50vw;
 }
 
-#memorialExplanations>div>div {
+.memorialExplanations>div>div {
   max-width: 100vw !important;
   width: 100vw;
 }
 
-#memorialExplanations p {
+.memorialExplanations p {
   margin: 0 13vw 3vh 13vw !important;
+}
+
+.memorialExplanations>div.fp-slides>div>div>div>div.slide.fp-slide>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh !important;
 }
 
 /* petite faim no secific formatting at the moment */

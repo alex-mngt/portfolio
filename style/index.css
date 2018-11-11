@@ -1,6 +1,7 @@
 /* ------------STATIC PART------------ */
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a, a:active, a:visited {
@@ -14,12 +15,17 @@ body {
   font-size: 17px;
   letter-spacing: 0.03em;
   font-family: 'Museo Sans Cyrl 700', sans-serif;
+  overflow: hidden !important;
   /* disabling text highlighting */
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+main {
+  height: 100vh;
 }
 
 /* header */
@@ -68,6 +74,10 @@ section:nth-of-type(n+2) {
 
 .selectedSection {
   display: block !important;
+}
+
+.mobile {
+  display: none !important;
 }
 
 #homeButton {
@@ -154,18 +164,6 @@ section:nth-of-type(n+2) {
     max-width: 100vw !important;
   }
 
-  #mobile {
-    display: block;
-  }
-
-  .desktopText {
-    display: none !important;
-  }
-
-  .desktopImage {
-    display: none;
-  }
-
   #homeButton {
     height: 15vw;
     width: 15vw;
@@ -174,10 +172,54 @@ section:nth-of-type(n+2) {
   #homeButton>svg {
     width: 8vw;
   }
-}
 
-#memorialExplanations p {
-  font-size: 1.3em;
+  /* Abercrombie */
+  #fullpage>article>div>div {
+    height: 100vh;
+  }
+
+  /* memorial */
+  #fullpage>.memorialImages>div>div {
+    height: auto;
+    width: auto;
+    align-self: center;
+  }
+
+  #fullpage>.memorialImages>div:first-of-type {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .memorialImages img {
+    width: 80vw
+  }
+
+  .memorialImages #sliderArrowsMobile {
+    margin-top: 5vh;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .memorialImages #sliderArrowsMobile>i {
+    font-size: 2em;
+    margin-top: 4vh
+  }
+
+  #memorialLeftArrow {
+    margin-right: 5vw;
+  }
+
+  #memorialRightArrow {
+    margin-left: 5vw;
+  }
+
+  .memorialExplanations>div.fp-slides>div>div>div>div.slide.fp-slide>div {
+    height: 100vh !important;
+  }
+
+  .memorialExplanations p {
+    font-size: 1.2em !important;
+  }
 }
 
 /* ----EXTRA SMALL DEVICES---- */
@@ -227,7 +269,7 @@ section:nth-of-type(n+2) {
 }
 
 /* ------------FULLPAGEJS CUSTOM------------*/
-/* CUSTOMING ARROWS */
+/* CUSTOMING SLIDER */
 .fp-controlArrow {
   border-style: none;
 }
@@ -249,11 +291,4 @@ section:nth-of-type(n+2) {
 .fp-slidesNav.fp-bottom {
   justify-content: center !important;
   bottom: 5vh;
-}
-
-#memorialExplanations>div.fp-slides>div>div>div>div.slide.fp-slide>div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 85vh !important;
 }

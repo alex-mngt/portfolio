@@ -8,13 +8,33 @@ window.onload = function() {
   let firstPage = true;
   let currentMemorial = 0;
   let currentPreview = 0;
+  let currentSection = 0;
   let seconds = 0;
   let nbSection = $("section:nth-of-type(n+2)").length;
-
+  nbSection = nbSection / 2;
+  let scrollTo = document.getElementById("fullpage").offsetHeight;
   // storage tables
   let tabPreview = document.querySelectorAll("section:first-of-type>article");
   let tabSection = document.querySelectorAll("body>main>section:nth-of-type(n+2)");
-  let tabMemorial = document.querySelectorAll("#memorialImages>div>img");
+  let tabMemorial;
+
+  // initializing the process
+  if (window.matchMedia("(max-width: 575px)").matches) {
+    currentSection = 1;
+    tabSection[1].classList.add("selectedSection");
+  } else {
+    tabSection[0].classList.add("selectedSection");
+  }
+
+  new fullpage('#fullpage', {
+
+    //options here
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    fixedElements: '#header',
+    verticalCentered: false,
+    autoScrolling: false
+
+  });
 
   //adding scroll down action
   function scrollOnClick(elmnt) {
@@ -24,7 +44,8 @@ window.onload = function() {
         $('#moveDown').css("animation", "scrollButtonDown 0.6s ease-out forwards");
       }
       setTimeout(function() {
-        fullpage_api.moveSectionDown();
+        window.scrollTo(0, scrollTo);
+        // fullpage_api.moveSectionDown();
         firstPage = false;
         setTimeout(function() {
           fullpage_api.destroy("all");
@@ -40,6 +61,7 @@ window.onload = function() {
             fixedElements: '#header'
           });
           $('section:not(#fullpage)').css("display", "none");
+          tabMemorial = document.querySelectorAll("#fullpage > .memorialImages > div > div:nth-child(1) > img");
         }, 1000);
       }, 250);
     });
@@ -48,26 +70,26 @@ window.onload = function() {
   // function change z-index to show the wanted picture
   function memorialPictures(elmnt) {
     $(document).on('click', elmnt, function() {
-      if (elmnt == "#memorialUpArrow") {
+      if (elmnt == "#memorialUpArrow" || elmnt == "#memorialLeftArrow") {
         $(".displayedMemorial").css("animation", "fadeOut .5s ease-out");
         currentMemorial += 1;
         if (currentMemorial > 2) {
           currentMemorial = 0;
         }
         setTimeout(function() {
-          console.log(currentMemorial);
+          // console.log(currentMemorial);
           $(".displayedMemorial").removeClass("displayedMemorial");
           tabMemorial[currentMemorial].classList.add("displayedMemorial");
           $(".displayedMemorial").css("animation", "fadeIn .5s ease-out");
         }, 500);
-      } else if (elmnt == "#memorialDownArrow") {
+      } else if (elmnt == "#memorialDownArrow" || elmnt == "#memorialRightArrow") {
         $(".displayedMemorial").css("animation", "fadeOut .5s ease-out");
         currentMemorial -= 1;
         if (currentMemorial < 0) {
           currentMemorial = 2;
         }
         setTimeout(function() {
-          console.log(currentMemorial);
+          // console.log(currentMemorial);
           $(".displayedMemorial").removeClass("displayedMemorial");
           tabMemorial[currentMemorial].classList.add("displayedMemorial");
           $(".displayedMemorial").css("animation", "fadeIn .5s ease-out");
@@ -90,17 +112,21 @@ window.onload = function() {
       if (elmnt == "#firstPage .upArrow") {
         $('#selectedPreview > img, #selectedPreview > video').css("animation", "imagesDisappearingUp 0.5s ease-in forwards");
         setTimeout(function() {
-          console.log('imageUp');
+          // console.log('imageUp');
           currentPreview -= 1;
-          nextPreview(currentPreview);
+          currentSection -= 2;
+          moveSelectedPreview(currentPreview);
+          moveSelectedSection(currentSection);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
         }, 500);
       } else if (elmnt == "#firstPage .downArrow") {
-        console.log('imageDown');
+        // console.log('imageDown');
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
         setTimeout(function() {
           currentPreview += 1;
-          nextPreview(currentPreview);
+          currentSection += 2;
+          moveSelectedPreview(currentPreview);
+          moveSelectedSection(currentSection);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.5s ease-out forwards");
         }, 500);
       }
@@ -112,6 +138,8 @@ window.onload = function() {
 
   memorialPictures("#memorialUpArrow");
   memorialPictures("#memorialDownArrow");
+  memorialPictures("#memorialLeftArrow");
+  memorialPictures("#memorialRightArrow");
 
   goToHomePage("#homeButton");
 
@@ -139,23 +167,28 @@ window.onload = function() {
   }
 
   function moveSelectedSection(e) {
-    console.log(e);
+    // console.log(e);
     if (e < 0) {
-      e = nbSection - 1;
-    } else if (e >= nbSection) {
-      e = 0;
+      if (window.matchMedia("(max-width: 575px)").matches) {
+        e = (nbSection * 2) - 1;
+      } else {
+        e = (nbSection * 2) - 2;
+      }
+    } else if (e >= nbSection * 2) {
+      if (window.matchMedia("(max-width: 575px)").matches) {
+        e = 1;
+      } else {
+        e = 0
+      }
     }
-    currentPreview = e;
+    currentSection = e;
+    console.log("current Section = " + currentSection);
     $(".selectedSection").removeClass("selectedSection section fp-section");
     tabSection[e].setAttribute("class", "section selectedSection fp-section");
   }
 
-  function nextPreview(e) {
-    moveSelectedPreview(e);
-    moveSelectedSection(e);
-  }
-
   // Automatic tasks
+
   setInterval(function() {
     if (firstPage) {
       seconds += 0.5;
@@ -163,14 +196,10 @@ window.onload = function() {
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
       } else if (seconds == 4) {
         currentPreview += 1;
-        if (currentPreview < nbSection) {
-          nextPreview(currentPreview);
-          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
-        } else {
-          currentPreview = 0;
-          nextPreview(currentPreview);
-          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
-        }
+        currentSection += 2;
+        moveSelectedPreview(currentPreview);
+        moveSelectedSection(currentSection);
+        $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
         seconds = 0;
       }
     }
