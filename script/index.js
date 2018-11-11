@@ -206,6 +206,10 @@ window.onload = function() {
   }, 500);
 
   // disable/enable scroll functions
+  document.body.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+  });
+
   var keys = {
     37: 1,
     38: 1,
