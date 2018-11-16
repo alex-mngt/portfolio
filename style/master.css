@@ -1,0 +1,332 @@
+/* this style sheet is for all the properties that won't affect the mobile responsive   */
+/* ------------STATIC PART------------ */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  overflow: hidden !important;
+  background-color: #e9e9e9;
+  color: black;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  font-family: 'Museo Sans Cyrl 700', sans-serif;
+  /* disabling text highlighting */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#firstPage {
+  height: 100vh !important;
+}
+
+/* header */
+header {
+  z-index: 5;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e9e9;
+  position: fixed;
+  top: 0;
+  height: 9vh;
+  width: 100vw;
+}
+
+header>a {
+  margin-left: 3vw;
+}
+
+header>nav {
+  width: 25vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+section article {
+  background-color: #e9e9e9;
+}
+
+/* hiding the main menu */
+#menu {
+  display: none;
+}
+
+/* CONTACT STYLESHEET */
+#mailLink,
+.instaLink {
+  text-decoration: underline #FFD42F;
+}
+
+#mailLink:hover,
+.instaLink {
+  color: grey;
+}
+
+/* personnalizing the home button menu  */
+#homeButton {
+  z-index: 5;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  background-color: #ffd42F;
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
+  box-shadow: 0 10px 20px rgba(31, 31, 31, .25);
+  transition: opacity .2s .6s, transform .2s;
+}
+
+#homeButton:hover {
+  transform: scale(1.2);
+}
+
+#homeButton:hover #monogramme {
+  opacity: 1;
+  display: block;
+}
+
+#homeButton:hover #homeIcon {
+  opacity: 0;
+  display: none;
+}
+
+#monogramme {
+  opacity: 0;
+  display: none;
+  align-self: center;
+}
+
+#homeIcon>path {
+  width: 2vw;
+  height: 2vw;
+}
+
+#homeButton>svg {
+  width: 2.3vw;
+  transition: opacity .05s;
+}
+
+/* ------------RESPONSIVE------------ */
+/* ----LARGE SCRREEN---- */
+@media all and (min-width: 1550px) {
+  body {
+    font-size: 21px;
+  }
+}
+
+/* ----TABLET---- */
+@media all and (max-width: 1024px) {
+  section.section.selectedSection {
+    display: none;
+  }
+
+  header {
+    font-size: 1.3em;
+  }
+
+  header>nav {
+    width: 40vw;
+  }
+
+  header>a {
+    margin-left: 5vw;
+  }
+
+  header>nav>a:nth-of-type(2) {
+    margin-right: 3vw;
+  }
+}
+
+/* ----MOBILE---- */
+@media all and (max-width: 575px) {
+  body {
+    font-size: 11px;
+  }
+}
+
+/* ----EXTRA SMALL DEVICES---- */
+@media all and (max-width: 370px) {
+  body {
+    font-size: 9px;
+  }
+}
+
+/* ------------FONTS------------ */
+@font-face {
+  font-family: 'Museo Sans Cyrl 700';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('../media/fonts/museo_sans_700/MuseoSansCyrl_2.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.eot');
+  src: url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.woff2') format('woff2'),
+    url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.woff') format('woff'),
+    url('../media/fonts/helvetica_neue_bold/HelveticaNeue-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Medium';
+  src: url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.eot');
+  src: url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.woff2') format('woff2'),
+    url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.woff') format('woff'),
+    url('../media/fonts/helvetica_neue_medium/HelveticaNeue-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans 500';
+  font-display: swap;
+  src: url(../media/fonts/museo_sans_500/OpenType/MuseoSans_500.ttf) format('truetype');
+}
+
+/* ------------KEYFRAMES------------*/
+/* ANIMATING SCROLLING BUTTON */
+@keyframes scrollButtonBounce {
+  50% {
+    transform: translate(0, 4vh) rotate(0.02deg);
+  }
+
+  65% {
+    transform: translate(0, -0.3vh) rotate(0.02deg);
+  }
+
+  90% {
+    transform: translate(0, 1.3vh) rotate(0.02deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0.02deg);
+  }
+}
+
+@keyframes scrollButtonDown {
+  100% {
+    transform: translate(0, 54vh) rotate(0.02deg);
+  }
+}
+
+@keyframes scrollButtonBouncingArrow {
+  25% {
+    transform: translate(0, 0.8vh) rotate(0.02deg);
+  }
+
+  75% {
+    transform: translate(0, -0.8vh) rotate(0.02deg);
+  }
+}
+
+/* IMAGES APPEARING & DISAPPEARING */
+/* First page */
+@keyframes imagesAppearingDown {
+  from {
+    transform: translate3d(0, -70vh, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) rotate(0.02deg);
+  }
+}
+
+@keyframes imagesDisappearingDown {
+  100% {
+    transform: translate3d(0, 80vh, 0) rotate(0.02deg);
+  }
+}
+
+@keyframes imagesDisappearingUp {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -80vh, 0) rotate(0.02deg);
+  }
+}
+
+@keyframes imagesAppearingUp {
+  0% {
+    transform: translate(0, 80vh);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0.02deg);
+  }
+}
+
+/* Memorial */
+@keyframes fadeIn {
+  from {
+    filter: blur(10px) opacity(0);
+    -webkit-filter: blur(10px) opacity(0);
+  }
+
+  to {
+    filter: blur(0) opacity(1);
+    -webkit-filter: blur(0) opacity(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    filter: blur(0) opacity(1);
+    -webkit-filter: blur(0) opacity(1);
+  }
+
+  to {
+    filter: blur(10px) opacity(0);
+    -webkit-filter: blur(10px) opacity(0);
+  }
+}
+
+/* ------------FULLPAGEJS CUSTOM------------*/
+/* CUSTOMING SLIDER */
+.fp-controlArrow {
+  border-style: none;
+}
+
+.fp-controlArrow.fp-prev {
+  width: 5vw;
+  height: 5vw;
+  left: 3vw;
+  background: url(../media/graphic/left_arrow.svg) no-repeat;
+}
+
+.fp-controlArrow.fp-next {
+  width: 5vw;
+  height: 5vw;
+  right: 3vw;
+  background: url(../media/graphic/right_arrow.svg) no-repeat;
+}
+
+.fp-slidesNav.fp-bottom {
+  justify-content: center !important;
+  bottom: 5vh;
+}

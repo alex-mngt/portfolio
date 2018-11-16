@@ -1,0 +1,155 @@
+/* this style sheet gather all the mobile styles  */
+/* GENERAL PRESENTATION */
+.presentation>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation>div>p,
+.presentation>div>h1 {
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 2em;
+}
+
+/* GENERAL FORMATTING */
+article:nth-of-type(n+2)>div:not(.fp-slides) {
+  display: flex;
+  justify-content: space-between;
+}
+
+section>article>div>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 92vh;
+  align-self: flex-end;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+article>div>div>p {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-family: 'HelveticaNeue-Medium', sans-serif;
+}
+
+section>article>div>div>p:last-of-type {
+  margin-bottom: 0;
+}
+
+h1,
+.titleSlide {
+  font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 2.6em;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+article:nth-of-type(n+2) p {
+  font-size: 1.3em;
+  margin-bottom: 3vh;
+  line-height: 5vh;
+}
+
+#homeButton {
+  height: 15vw;
+  width: 15vw;
+}
+
+#homeButton>svg {
+  width: 8vw;
+}
+
+.fp-slides p {
+  margin: 0 13vw 3vh 13vw;
+}
+
+/* abercrombie */
+#abercrombie_mobile>article:nth-of-type(2) img {
+  object-fit: cover;
+  height: 92vh;
+  align-self: flex-end;
+}
+
+/* martens */
+.martensIframe>div {
+  display: flex;
+  justify-content: center !important;
+}
+
+.martensIframe>div>iframe {
+  align-self: center;
+  width: 80vw;
+  height: 46vw;
+}
+
+/* memorial */
+.memorialImages img {
+  display: none;
+  width: 80vw;
+}
+
+.displayedMemorial {
+  display: block !important;
+}
+
+section>.memorialImages>div:first-of-type {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memorialImages>div>div {
+  height: auto;
+  width: auto;
+  align-self: center;
+}
+
+.memorialImages #sliderArrowsMobile {
+  flex-direction: row;
+  margin: 0;
+}
+
+.memorialImages #sliderArrowsMobile>i {
+  font-size: 2em;
+  margin-top: 4vh;
+}
+
+#memorialLeftArrow {
+  margin-right: 5vw;
+}
+
+#memorialRightArrow {
+  margin-left: 5vw;
+}
+
+/* petite faim  */
+#petiteFaim_mobile>article:nth-of-type(n+2)>div:not(.fp-slidesNav) {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#petiteFaim_mobile>article:nth-of-type(3) img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.petiteFaimDetails img {
+  width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+}
+
+.petiteFaimDetails .slide>.fp-tableCell:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#burgerWrapper {
+  justify-self: end;
+}

@@ -11,34 +11,40 @@ window.onload = function() {
   let currentSection = 0;
   let seconds = 0;
   let nbSection = $("section:nth-of-type(n+2)").length;
-  nbSection = nbSection / 2;
-  let scrollTo = document.getElementById("fullpage").offsetHeight;
+  let scrollTo = document.getElementById("firstPage").offsetHeight;
+  let urlMobile;
   // storage tables
   let tabPreview = document.querySelectorAll("section:first-of-type>article");
   let tabSection = document.querySelectorAll("body>main>section:nth-of-type(n+2)");
-  let tabMemorial;
-
-  // initializing the process
-  if (window.matchMedia("(max-width: 575px)").matches) {
-    currentSection = 1;
-    tabSection[1].classList.add("selectedSection");
-  } else {
-    tabSection[0].classList.add("selectedSection");
-  }
-
-  new fullpage('#fullpage', {
-
-    //options here
-    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    fixedElements: '#header',
-    verticalCentered: false,
-    autoScrolling: false
-
-  });
+  let tabMemorial = document.querySelectorAll(".memorialImages img");
 
   //adding scroll down action
   function scrollOnClick(elmnt) {
     $(document).on('click', elmnt, function() {
+      if (window.matchMedia("(max-width: 1024px)").matches) {
+        console.log("mobile");
+        switch (currentPreview) {
+          case 0:
+            console.log("abercrombie");
+            urlMobile = "file:///Users/alexmongeot/Documents/Development/Portfolio%20/html/english/abercrombie.html";
+            break;
+          case 1:
+            console.log("martens");
+            urlMobile = "file:///Users/alexmongeot/Documents/Development/Portfolio%20/html/english/martens.html";
+            break;
+          case 2:
+            console.log("memorial");
+            urlMobile = "file:///Users/alexmongeot/Documents/Development/Portfolio%20/html/english/memorial.html";
+            break;
+          case 3:
+            console.log("petite faim");
+            urlMobile = "file:///Users/alexmongeot/Documents/Development/Portfolio%20/html/english/petite_faim.html";
+            break;
+          default:
+            console.log("review the current preview affectation");
+        }
+        document.location.href = urlMobile;
+      }
       $('#homeButton').css("opacity", "1");
       if (elmnt == "#moveDown") {
         $('#moveDown').css("animation", "scrollButtonDown 0.6s ease-out forwards");
@@ -61,7 +67,6 @@ window.onload = function() {
             fixedElements: '#header'
           });
           $('section:not(#fullpage)').css("display", "none");
-          tabMemorial = document.querySelectorAll("#fullpage > .memorialImages > div > div:nth-child(1) > img");
         }, 1000);
       }, 250);
     });
@@ -114,9 +119,7 @@ window.onload = function() {
         setTimeout(function() {
           // console.log('imageUp');
           currentPreview -= 1;
-          currentSection -= 2;
-          moveSelectedPreview(currentPreview);
-          moveSelectedSection(currentSection);
+          nextPreview(currentPreview);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingUp 0.5s ease-out forwards");
         }, 500);
       } else if (elmnt == "#firstPage .downArrow") {
@@ -124,9 +127,7 @@ window.onload = function() {
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
         setTimeout(function() {
           currentPreview += 1;
-          currentSection += 2;
-          moveSelectedPreview(currentPreview);
-          moveSelectedSection(currentSection);
+          nextPreview(currentPreview);
           $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.5s ease-out forwards");
         }, 500);
       }
@@ -138,8 +139,6 @@ window.onload = function() {
 
   memorialPictures("#memorialUpArrow");
   memorialPictures("#memorialDownArrow");
-  memorialPictures("#memorialLeftArrow");
-  memorialPictures("#memorialRightArrow");
 
   goToHomePage("#homeButton");
 
@@ -169,26 +168,22 @@ window.onload = function() {
   function moveSelectedSection(e) {
     // console.log(e);
     if (e < 0) {
-      if (window.matchMedia("(max-width: 575px)").matches) {
-        e = (nbSection * 2) - 1;
-      } else {
-        e = (nbSection * 2) - 2;
-      }
-    } else if (e >= nbSection * 2) {
-      if (window.matchMedia("(max-width: 575px)").matches) {
-        e = 1;
-      } else {
-        e = 0
-      }
+      e = nbSection - 1;
+    } else if (e >= nbSection) {
+      e = 0;
     }
-    currentSection = e;
-    console.log("current Section = " + currentSection);
+    currentPreview = e;
     $(".selectedSection").removeClass("selectedSection section fp-section");
     tabSection[e].setAttribute("class", "section selectedSection fp-section");
   }
 
-  // Automatic tasks
+  function nextPreview(e) {
+    moveSelectedPreview(e);
+    console.log(currentPreview);
+    moveSelectedSection(e);
+  }
 
+  // Automatic tasks
   setInterval(function() {
     if (firstPage) {
       seconds += 0.5;
@@ -196,20 +191,20 @@ window.onload = function() {
         $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesDisappearingDown 0.5s ease-in forwards");
       } else if (seconds == 4) {
         currentPreview += 1;
-        currentSection += 2;
-        moveSelectedPreview(currentPreview);
-        moveSelectedSection(currentSection);
-        $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
+        if (currentPreview < nbSection) {
+          nextPreview(currentPreview);
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
+        } else {
+          currentPreview = 0;
+          nextPreview(currentPreview);
+          $('#selectedPreview>img, #selectedPreview > video').css("animation", "imagesAppearingDown 0.6s ease-out forwards");
+        }
         seconds = 0;
       }
     }
   }, 500);
 
   // disable/enable scroll functions
-  document.body.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-  });
-
   var keys = {
     37: 1,
     38: 1,
