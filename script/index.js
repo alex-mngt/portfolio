@@ -26,19 +26,23 @@ window.onload = function() {
         switch (currentPreview) {
           case 0:
             console.log("abercrombie");
-            urlMobile = "https://alex-mngt.github.io/portfolio/html/english/abercrombie.html";
+            urlMobile = "./html/english/abercrombie.html";
+            // urlMobile = "https://alex-mngt.github.io/portfolio/html/english/abercrombie.html";
             break;
           case 1:
             console.log("martens");
-            urlMobile = "https://alex-mngt.github.io/portfolio/html/english/martens.html";
+            urlMobile = "./html/english/martens.html";
+            // urlMobile = "https://alex-mngt.github.io/portfolio/html/english/martens.html";
             break;
           case 2:
             console.log("memorial");
-            urlMobile = "https://alex-mngt.github.io/portfolio/html/english/memorial.html";
+            urlMobile = "./html/english/memorial.html";
+            // urlMobile = "https://alex-mngt.github.io/portfolio/html/english/memorial.html";
             break;
           case 3:
             console.log("petite faim");
-            urlMobile = "https://alex-mngt.github.io/portfolio/html/english/petite_faim.html";
+            urlMobile = "./html/english/petite_faim.html";
+            // urlMobile = "https://alex-mngt.github.io/portfolio/html/english/petite_faim.html";
             break;
           default:
             console.log("review the current preview affectation");

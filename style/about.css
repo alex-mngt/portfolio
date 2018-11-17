@@ -40,6 +40,10 @@ img {
     font-size: 13px;
   }
 
+  p {
+    margin: 0 7vw 3vh 7vw;
+  }
+
   img {
     width: 20vw;
   }
