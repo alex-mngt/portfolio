@@ -1,5 +1,9 @@
 /* this style sheet gather all the mobile styles  */
 /* GENERAL PRESENTATION */
+img {
+  z-index: 1;
+}
+
 .presentation {
   z-index: 2;
 }
