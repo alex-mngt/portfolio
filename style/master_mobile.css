@@ -75,7 +75,7 @@ article:nth-of-type(n+2) p {
 }
 
 .fp-slides p {
-  margin: 0 13vw 3vh 13vw;
+  margin: 0 12vw 3vh 12vw;
 }
 
 #landscapePopUp {
@@ -94,18 +94,27 @@ article:nth-of-type(n+2) p {
 #landscapePopUp>div {
   height: 40vh;
   width: 60vw;
-  background-color: #e9e9e9;
-  border-radius: 25px;
+  background-color: white;
+  border-radius: 6.5px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   text-align: center;
-  font-family: 'HelveticaNeue-Medium', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#landscapePopUp>div>p {
-  margin: 0 3vw 0 3vw;
+#landscapePopUp p {
+  text-align: left;
+  font-size: 1em;
+  margin: 0 4vw 0 4vw;
+  color: #6b6b6b;
+}
+
+#landscapePopUp h1 {
+  font-size: 1.5em;
+  color: #212121;
+  margin: 4vw 0 2.5vw 4vw;
 }
 
 /* PAGES FORMATTING */
