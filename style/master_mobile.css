@@ -4,7 +4,7 @@ img {
   z-index: 1;
 }
 
-.presentation {
+div {
   z-index: 2;
 }
 
@@ -83,7 +83,7 @@ article:nth-of-type(n+2) p {
 }
 
 #landscapePopUp {
-  z-index: 6;
+  z-index: 3;
   height: 100vh;
   width: 100vw;
   background-color: #3a3a3a91;
@@ -99,7 +99,7 @@ article:nth-of-type(n+2) p {
   height: 40vh;
   width: 60vw;
   background-color: white;
-  border-radius: 6.5px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
