@@ -1,5 +1,9 @@
 /* this style sheet gather all the mobile styles  */
 /* GENERAL PRESENTATION */
+.presentation {
+  z-index: 2;
+}
+
 .presentation>div {
   display: flex;
   flex-direction: column;
@@ -49,15 +53,15 @@ h1,
 .titleSlide {
   font-family: 'Helevtica Neue', 'HelveticaNeue-Bold', sans-serif;
   font-weight: bold;
-  font-size: 2.6em;
+  font-size: 2.3em;
   text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 4vh;
 }
 
 article:nth-of-type(n+2) p {
   font-size: 1.3em;
   margin-bottom: 3vh;
-  line-height: 5vh;
+  line-height: 2em;
 }
 
 #homeButton {
@@ -175,15 +179,16 @@ section>.memorialImages>div:first-of-type {
 }
 
 .petiteFaimDetails img {
-  width: 100vw;
-  height: 45vh;
+  width: 74vw;
+  height: 35vh;
   object-fit: cover;
 }
 
 .petiteFaimDetails div.detailsPhoto>.fp-tableCell {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Prevent landscape mode  */
