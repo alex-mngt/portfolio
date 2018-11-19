@@ -166,15 +166,6 @@ section article {
   }
 
   /* FISRT PAGE */
-  /* Preview page grid */
-  main {
-    height: 100vh !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   #firstPage {
     display: grid;
     height: 50vh !important;
@@ -183,7 +174,7 @@ section article {
     grid-template-rows: 1fr 10vh;
   }
 
-  section:first-of-type>p:first-of-type {
+  #firstPage>p:first-of-type {
     grid-column: 1/2;
     grid-row: 1/2;
   }
