@@ -209,10 +209,12 @@ section article {
   }
 
   #firstPage .upArrow {
+    margin-bottom: 2.5vh;
     grid-row: 1/2;
   }
 
   #firstPage .downArrow {
+    margin-top: 2.5vh;
     grid-row: 2/3;
   }
 
@@ -249,28 +251,28 @@ section article {
 
   /* categorie of the preview */
   #selectedPreview>p.category {
-    font-size: 7.15vw;
+    font-size: 7.5vw;
     margin-bottom: 33vw;
   }
 
   /* PHOTOGRAPHY */
   .photography {
-    margin-right: 21.5vw;
+    margin-right: 27.5vw;
   }
 
   /* VIDEO */
   .video {
-    margin-right: 55.2vw;
+    margin-right: 61.2vw;
   }
 
   /* DESIGN */
   .design {
-    margin-right: 47.7vw;
+    margin-right: 53.7vw;
   }
 
   /* WEBDESIGN */
   .webdesign {
-    margin-right: 37.5vw;
+    margin-right: 43.5vw;
   }
 
   #moveDown,
