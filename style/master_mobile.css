@@ -40,8 +40,8 @@ section>article>div>div {
   text-justify: inter-word;
 }
 
-section>article>div {
-  height: 92vh !important;
+section>article.photoFullPage>div {
+  height: 100vh !important;
 }
 
 article>div>div>p {
