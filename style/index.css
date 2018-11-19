@@ -150,8 +150,8 @@ div#progBar {
   grid-row: 2/3;
   align-self: center;
   justify-self: end;
-  padding-bottom: 4.1vw;
-  padding-right: 4.8vw;
+  /* margin-bottom: 4.1vw;
+  margin-right: 4.8vw; */
   z-index: 1;
   stroke-width: 2.5px;
 }
