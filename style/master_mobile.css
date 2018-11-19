@@ -2,11 +2,11 @@
 /* GENERAL PRESENTATION */
 img {
   z-index: 1;
+  width: 100%;
 }
 
 article {
   z-index: 2;
-  height: 100vh !important;
 }
 
 .presentation>div {
@@ -38,6 +38,10 @@ section>article>div>div {
   align-self: flex-end;
   text-align: justify;
   text-justify: inter-word;
+}
+
+section>article>div {
+  height: 92vh !important;
 }
 
 article>div>div>p {
