@@ -166,7 +166,7 @@ section article {
 /* ----MOBILE---- */
 @media all and (max-width: 575px) {
   body {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   /* FISRT PAGE */
