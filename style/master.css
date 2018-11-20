@@ -138,6 +138,10 @@ section article {
 
 /* ----TABLET---- */
 @media all and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
   section.section.selectedSection {
     display: none;
   }
@@ -162,7 +166,7 @@ section article {
 /* ----MOBILE---- */
 @media all and (max-width: 575px) {
   body {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   /* FISRT PAGE */
@@ -280,6 +284,13 @@ section article {
   #moveDown,
   .seeMore {
     display: none;
+  }
+}
+
+/* ----SMALL DEVICES---- */
+@media all and (max-width: 370px) {
+  body {
+    font-size: 11px;
   }
 }
 
