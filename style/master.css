@@ -439,6 +439,42 @@ section article {
   }
 }
 
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 15vh, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes imageInRigth {
+  from {
+    opacity: 0.8;
+    transform: translate3d(3vw, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes imageInLeft {
+  from {
+    opacity: 0.8;
+    transform: translate3d(-3vw, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /* ------------FULLPAGEJS CUSTOM------------*/
 /* CUSTOMING SLIDER */
 .fp-controlArrow {

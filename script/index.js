@@ -55,7 +55,9 @@ window.onload = function() {
       }
       setTimeout(function() {
         window.scrollTo(0, scrollTo);
-        // fullpage_api.moveSectionDown();
+        $('.presentation').css("animation", "textIn 1s ease-out backwards");
+        currentSection = 1;
+        console.log(currentSection);
         firstPage = false;
         setTimeout(function() {
           fullpage_api.destroy("all");
@@ -68,7 +70,24 @@ window.onload = function() {
             loopHorizontal: false,
             resetSliders: true,
             slidesNavigation: true,
-            fixedElements: '#header'
+            fixedElements: '#header',
+            onLeave: function(origin, destination, direction) {
+              var leavingSection = this;
+
+              if (direction == 'down') {
+                currentSection += 1;
+                $('.selectedSection>article:nth-of-type(' + currentSection + ') .text').css("animation", "textIn 1s ease-out backwards");
+                $('.selectedSection>article:nth-of-type(' + currentSection + ') .imageRight').css("animation", "imageInRigth 1s  0.15s backwards");
+                $('.selectedSection>article:nth-of-type(' + currentSection + ') .imageLeft').css("animation", "imageInLeft 1s  0.15s backwards");
+                setTimeout(function() {
+                  $('.text, .imageRight, .imageLeft').css("animation", "");
+                }, 1000);
+                console.log("down");;
+              } else if (direction == 'up') {
+                currentSection -= 1;
+                console.log("up");
+              }
+            }
           });
           $('section:not(#fullpage)').css("display", "none");
         }, 1000);
@@ -249,5 +268,18 @@ window.onload = function() {
   }
 
   disableScroll();
+
+  function scrollEvent(event) {
+    if ((event.deltaY) < 0) {
+      console.log("please click on the home button");
+    }
+  }
+
+  document.addEventListener("wheel", function() {
+    if (currentSection == 1) {
+      scrollEvent(event);
+    }
+  });
+
 
 }
