@@ -405,7 +405,7 @@ body {
     height: 50vh;
     width: 100vw;
     position: absolute;
-    top: 9vh;
+    bottom: -50vh;
     background-color: #e9e9e9;
     content: "";
   }
