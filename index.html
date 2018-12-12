@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="./style/index.css">
   <link rel="stylesheet" href="./style/master.css" />
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="./script/index.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.extensions.min.js" type="text/javascript"></script>
   <meta name="google-site-verification" content="11BTaZX3YqoEkJv__jWJwMmvWNwJOgN3-wjuEsOFIVY" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
 </head>
 
 <body>
@@ -27,15 +28,33 @@
       <a href="./html/english/about.html">About</a>
       <a href="./html/english/contact.html">Contact</a>
     </nav>
-    <!-- Menu-->
+  </header>
+
+  <header id="navbar">
+
+    <div class="logo">
+      <h1 id="header_title">Portfolio</h1>
+    </div>
+
+    <input id="burger" type="checkbox" />
+
+    <label for="burger" class="burger_box">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
     <nav id="menu">
       <ul>
-        <li> Photo </li>
-        <li> Video </li>
-        <li> Design </li>
-        <li> Web </li>
-        <li> About </li>
-        <li> Contact </li>
+        <li>
+          <a href='../../index.html'>Home</a>
+        </li>
+        <li>
+          <a href="/sauce/index.php">About us</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -70,7 +89,8 @@
       </div>
 
       <!-- Scroll down button -->
-      <svg id="moveDown" class="svgScroll, bouncingButton" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+      <svg id="moveDown" class="svgScroll, bouncingButton" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 500 500">
         <circle cx="250" cy="250" r="204" fill="#ffd42f" />
         <path class="scrollPath" d="M249.6 294.52h.17a6.58 6.58 0 0 0 4.93-2.3l.05-.06L304 249.82a6.65 6.65 0 0 0 .7-9.36 6.64 6.64 0 0 0-9.35-.71l-45.75 39.34-45.74-39.34a6.66 6.66 0 0 0-9.36.71 6.66 6.66 0 0 0 .71 9.36l49.24 42.34.05.06a6.6 6.6 0 0 0 4.93 2.3z"
           fill="#fff" /></svg>
@@ -80,7 +100,8 @@
         <p class="category photography">
           PHOTOGRAPHY
         </p>
-        <img src="./media/photos/miniatures/abercrombie_miniature-@1x.jpg" alt="Thumbnail of a photograph of an Abercrombie shop" srcset="./media/photos/miniatures/abercrombie_miniature-@2x.jpg 2x,
+        <img src="./media/photos/miniatures/abercrombie_miniature-@1x.jpg" alt="Thumbnail of a photograph of an Abercrombie shop"
+          srcset="./media/photos/miniatures/abercrombie_miniature-@2x.jpg 2x,
                   ./media/photos/miniatures/abercrombie_miniature-@1x.jpg 1x" />
         <div class="prevInfo">
           <p>
@@ -140,7 +161,8 @@
         <p class="category photography">
           PHOTOGRAPHY
         </p>
-        <img src="./media/photos/miniatures/memorial_miniature-@1x.jpg" alt="Thumbnail of a photograph of the eternal flame on the unknown soldier tomb" srcset="./media/photos/miniatures/memorial_miniature-@2x.jpg 2x,
+        <img src="./media/photos/miniatures/memorial_miniature-@1x.jpg" alt="Thumbnail of a photograph of the eternal flame on the unknown soldier tomb"
+          srcset="./media/photos/miniatures/memorial_miniature-@2x.jpg 2x,
                   ./media/photos/miniatures/memorial_miniature-@1x.jpg 1x" />
         <div class="prevInfo">
           <p>
@@ -169,7 +191,8 @@
         <p class="category design">
           DESIGN
         </p>
-        <img src="./media/photos/miniatures/petite_fin_miniature-1x.jpg" alt="Thumbnail of a photograph of a food deliver on bike" srcset="./media/photos/miniatures/petite_fin_miniature-@2x.jpg 2x, ./media/photos/miniatures/petite_fin_miniature-1x.jpg 1x" />
+        <img src="./media/photos/miniatures/petite_fin_miniature-1x.jpg" alt="Thumbnail of a photograph of a food deliver on bike"
+          srcset="./media/photos/miniatures/petite_fin_miniature-@2x.jpg 2x, ./media/photos/miniatures/petite_fin_miniature-1x.jpg 1x" />
         <div class="prevInfo">
           <p>
             Project
@@ -196,7 +219,8 @@
         <p class="category webdesign">
           WEBDESIGN
         </p>
-        <img src="./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg" alt="Thumbnail of a photograph of woman's hand on asymmetric bars" srcset="./media/photos/miniatures/dijon_gym_art_miniature-@2x.jpg 2x, ./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg 1x" />
+        <img src="./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg" alt="Thumbnail of a photograph of woman's hand on asymmetric bars"
+          srcset="./media/photos/miniatures/dijon_gym_art_miniature-@2x.jpg 2x, ./media/photos/miniatures/dijon_gym_art_miniature-@1x.jpg 1x" />
         <div class="prevInfo">
           <p>
             Project
@@ -234,9 +258,15 @@
         <p>
           2017
         </p>
+        <svg class="scrollAnim" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 246">
+          <path d="M99.9 207c-23.4 0-42.5-21-42.5-46.6V85.2c0-25.6 19.2-46.6 42.5-46.6 23.4 0 42.5 21 42.5 46.6v75.2c0 25.6-19.1 46.6-42.5 46.6z"
+            fill="none" stroke="#000" stroke-width="5" stroke-miterlimit="10" />
+          <circle cx="99.9" cy="89" r="10" stroke="#000" stroke-width="5" stroke-miterlimit="10" />
+        </svg>
       </article>
       <article class="section abercrombieObjective">
-        <img class="imageLeft" src="./media/photos/illustrations/abercrombie-@1x.jpg" alt="Photograph of an Abercrombie shop" srcset="./media/photos/illustrations/abercrombie-@2x.jpg 2x, ./media/photos/illustrations/abercrombie-@1x.jpg 1x">
+        <img class="imageLeft" src="./media/photos/illustrations/abercrombie-@1x.jpg" alt="Photograph of an Abercrombie shop"
+          srcset="./media/photos/illustrations/abercrombie-@2x.jpg 2x, ./media/photos/illustrations/abercrombie-@1x.jpg 1x">
         <div class="text">
           <h1>Objective</h1>
           <p>
@@ -245,7 +275,11 @@
           <p>
             The objective was to transpose the special atmosphere of their store which made the fame of this brand.
           </p>
-          <p>A special thanks to my models <a class="instaLink" href="https://www.instagram.com/antoinerousset/">Antoine Rousset</a>, <a class="instaLink" href="https://www.instagram.com/benbracco/">Romain Braccini</a>, <a class="instaLink" href="https://www.instagram.com/pablparnaso/">Pabl
+          <p>Indeed their brand identity is constructed arround vintage and luxurious stores that are perfectly in
+            harmony with the clothes they sell </p>
+          <p>A special thanks to my models <a class="instaLink" href="https://www.instagram.com/antoinerousset/">Antoine
+              Rousset</a>, <a class="instaLink" href="https://www.instagram.com/benbracco/">Romain Braccini</a>, <a
+              class="instaLink" href="https://www.instagram.com/pablparnaso/">Pabl
               Parnaso</a>
             and <a class="instaLink" href="https://www.instagram.com/martingaboriaud/"> Martin Gaboriaud</a></p>
         </div>
@@ -256,16 +290,22 @@
           <p>
             The picture has been shot in their New-York store so I had to compose with the environment;
           </p>
-          <p>On one hand the picture should have been better with some additional lights and a real studio setup but on the other, the fact that I took this picture "Spontaneously" allows to bring more authenticity to the picture.
+          <p>On one hand the picture should have been better with some additional lights and a real studio setup but on
+            the other, the fact that I took this picture "Spontaneously" allows to bring more authenticity to the
+            picture.
           </p>
-          <p>Concerning the composition, I asked my models to came into this stairwell which is architecturally pretty interesting. It may be the heritage of the ancient building which have been carefully restored by the firm to fit in their
+          <p>Concerning the composition, I asked my models to came into this stairwell which is architecturally pretty
+            interesting. It may be the heritage of the ancient building which have been carefully restored by the firm
+            to fit in their
             artistic direction.
           </p>
           <p>
-            In post production I added some grain to remind the analog photography which match pretty well with the vintage style of the place.
+            In post production I added some grain to remind the analog photography which match pretty well with the
+            vintage style of the place.
           </p>
         </div>
-        <img class="imageRight" src="./media/photos/illustrations/abercrombie_store-@1x.jpg" alt="Photograph of an Abercrombie front window" srcset="./media/photos/illustrations/abercrombie_store-@2x.jpg 2x, ./media/photos/illustrations/abercrombie_store-@1x.jpg" />
+        <img class="imageRight" src="./media/photos/illustrations/abercrombie_store-@1x.jpg" alt="Photograph of an Abercrombie front window"
+          srcset="./media/photos/illustrations/abercrombie_store-@2x.jpg 2x, ./media/photos/illustrations/abercrombie_store-@1x.jpg" />
       </article>
     </section>
     <!-- MARTENS -->
@@ -283,9 +323,15 @@
         <p>
           2018
         </p>
+        <svg class="scrollAnim" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 246">
+          <path d="M99.9 207c-23.4 0-42.5-21-42.5-46.6V85.2c0-25.6 19.2-46.6 42.5-46.6 23.4 0 42.5 21 42.5 46.6v75.2c0 25.6-19.1 46.6-42.5 46.6z"
+            fill="none" stroke="#000" stroke-width="6" stroke-miterlimit="10" />
+          <circle cx="99.9" cy="89" r="10.9" stroke="#000" stroke-width="5" stroke-miterlimit="10" />
+        </svg>
       </article>
       <article class="section martensIframe">
-        <iframe title="Youtube player" width="560" height="315" src="https://www.youtube.com/embed/2nG6M4ZjH5Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe title="Youtube player" width="560" height="315" src="https://www.youtube.com/embed/2nG6M4ZjH5Y"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </article>
     </section>
     <!-- MEMORIAL -->
@@ -303,11 +349,18 @@
         <p>
           2017
         </p>
+        <svg class="scrollAnim" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 246">
+          <path d="M99.9 207c-23.4 0-42.5-21-42.5-46.6V85.2c0-25.6 19.2-46.6 42.5-46.6 23.4 0 42.5 21 42.5 46.6v75.2c0 25.6-19.1 46.6-42.5 46.6z"
+            fill="none" stroke="#000" stroke-width="6" stroke-miterlimit="10" />
+          <circle cx="99.9" cy="89" r="10.9" stroke="#000" stroke-width="5" stroke-miterlimit="10" />
+        </svg>
       </article>
       <article class="section memorialImages">
         <div>
-          <img class="displayedMemorial" src="./media/photos/illustrations/memorial_tombe-@1x.jpg" alt="Photograph of a lot of tombs at the Arlington cimetery" srcset="./media/photos/illustrations/memorial_tombe-@2x.jpg 2x, ./media/photos/illustrations/memorial_tombe-@1x.jpg 1x">
-          <img src="./media/photos/illustrations/memorial_flamme-@1x.jpg" alt="Photograph of the eternal flame on the unknown soldier tomb" srcset="./media/photos/illustrations/memorial_flamme-@2x.jpg 2x, ./media/photos/illustrations/memorial_flamme-@1x.jpg 1x">
+          <img class="displayedMemorial" src="./media/photos/illustrations/memorial_tombe-@1x.jpg" alt="Photograph of a lot of tombs at the Arlington cimetery"
+            srcset="./media/photos/illustrations/memorial_tombe-@2x.jpg 2x, ./media/photos/illustrations/memorial_tombe-@1x.jpg 1x">
+          <img src="./media/photos/illustrations/memorial_flamme-@1x.jpg" alt="Photograph of the eternal flame on the unknown soldier tomb"
+            srcset="./media/photos/illustrations/memorial_flamme-@2x.jpg 2x, ./media/photos/illustrations/memorial_flamme-@1x.jpg 1x">
           <img src="./media/photos/illustrations/memorial_arthur-@1x.jpg" alt="Photgraph of a tomb" srcset="./media/photos/illustrations/memorial_arthur-@2x.jpg 2x, ./media/photos/illustrations/memorial_arthur-@1x.jpg 1x">
         </div>
         <div id="sliderArrows">
@@ -323,19 +376,29 @@
       <article class="section memorialExplanations">
         <div class="slide text">
           <h1 class="titleSlide">Explanations</h1>
-          <p>This project named « Memorial » is a 3 photography series shot in the Arlington National Cemetery in 2017. This cemetery is a military cemetery where soldiers from all wars, from Vietnam to Iraq, are buried.</p>
-          <p>The purpose of this project was to transpose my feelings when I visited this cemetery and the very special atmosphere that prevails on this place.</p>
+          <p>This project named « Memorial » is a 3 photography series shot in the Arlington National Cemetery in 2017.
+            This cemetery is a military cemetery where soldiers from all wars, from Vietnam to Iraq, are buried.</p>
+          <p>The purpose of this project was to transpose my feelings when I visited this cemetery and the very special
+            atmosphere that prevails on this place.</p>
           <p>The main thing I wanted to express thanks to these photographies is the paradox which marks this place.</p>
-          <p>First, there were tombs for as far as the eyes can see and it gave the feeling that all the soldiers acted like a single person. It tends to make the people forget that these soldiers were individuals and humans before anything
+          <p>First, there were tombs for as far as the eyes can see and it gave the feeling that all the soldiers acted
+            like a single person. It tends to make the people forget that these soldiers were individuals and humans
+            before anything
             else.</p>
         </div>
         <div class="slide">
           <h1 class="titleSlide desktop">Explanations</h1>
-          <p>This idea of soldiers acting like a whole is principally expressed on the third picture as it begins from a single tombe on the foreground and it grows until it’s get impossible to clearly distinguish each single tomb on the background.</p>
+          <p>This idea of soldiers acting like a whole is principally expressed on the third picture as it begins from
+            a single grave on the foreground and it grows until it’s get impossible to clearly distinguish each single
+            tomb on the background.</p>
           <p>It's also accentuated by the lack of name on the first tomb, as if this soldier could have been everyone.</p>
-          <p>Then, when I was walking on the paths of this cemetery, it appeared essential to me to make the viewer remember that all these soldiers, each of these individuals has gave their life to serve their country and they can’t be
+          <p>Then, when I was walking on the paths of this cemetery, it appeared essential to me to make the viewer
+            remember that all these soldiers, each of these individuals has gave their life to serve their country and
+            they can’t be
             perceived just as a whole.</p>
-          <p>I tried to express this through the first and the second photography. The first photography represents the flame of the unknown soldier which pay tribute to every single soldiers dead who the corpse haven’t been recovered; and the
+          <p>I tried to express this through the first and the second photography. The first photography represents the
+            flame of the unknown soldier which pay tribute to every single soldiers dead who the corpse haven’t been
+            recovered; and the
             second one focus on a single tomb on which a name is inscribed</p>
         </div>
       </article>
@@ -356,32 +419,50 @@
         <p>
           2018
         </p>
+        <svg class="scrollAnim" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 246">
+          <path d="M99.9 207c-23.4 0-42.5-21-42.5-46.6V85.2c0-25.6 19.2-46.6 42.5-46.6 23.4 0 42.5 21 42.5 46.6v75.2c0 25.6-19.1 46.6-42.5 46.6z"
+            fill="none" stroke="#000" stroke-width="6" stroke-miterlimit="10" />
+          <circle cx="99.9" cy="89" r="10.9" stroke="#000" stroke-width="5" stroke-miterlimit="10" />
+        </svg>
       </article>
       <article class="section petiteFaimObjective">
-        <img class="imageLeft" src="./media/photos/illustrations/velo-@1x.jpg" alt="Photograph of a food deliver who rides a bike" srcset="./media/photos/illustrations/velo-@2x.jpg 2x, ./media/photos/illustrations/velo-@1x.jpg 1x">
+        <img class="imageLeft" src="./media/photos/illustrations/velo-@1x.jpg" alt="Photograph of a food deliver who rides a bike"
+          srcset="./media/photos/illustrations/velo-@2x.jpg 2x, ./media/photos/illustrations/velo-@1x.jpg 1x">
         <div class="text">
           <h1>Objective</h1>
           <p>I had to create an entire corporate identity based on the name, the business sector and the location.</p>
-          <p>The one I chosen is named "Petite Faim" and is based into the «République» district in Dijon. It's appears perfect to me because this area hosts a lot of students and the food delivery particularly speaks to them these times.</p>
+          <p>The one I chosen is named "Petite Faim" and is based into the «République» district in Dijon. It's appears
+            perfect to me because this area hosts a lot of students and the food delivery particularly speaks to them
+            these times.</p>
         </div>
       </article>
       <article class="section petiteFaimDetails">
         <div class="text">
           <h1>Details</h1>
-          <p>By creating this corporate identity, I had to care about the visual part as well as the values. Concerning the values, since République is a student district, I thought that youth should be a great first value. </p>
-          <p>Furthermore, all the companies in this business sector offer pretty the same pricing. What make the difference is the customer relation and in this very youth quarters it’s only improving this.</p>
-          <p>Then an other value that appears essential to me was the care about the environment because it's getting more and more important and it’s becoming a sales pitch especially for the youth target audience.</p>
+          <p>By creating this corporate identity, I had to care about the visual part as well as the values. Concerning
+            the values, since République is a student district, I thought that youth should be a great first value. </p>
+          <p>Furthermore, all the companies in this business sector offer pretty the same pricing. What make the
+            difference is the customer relation and in this very youth quarters it’s only improving this.</p>
+          <p>Then an other value that appears essential to me was the care about the environment because it's getting
+            more and more important and it’s becoming a sales pitch especially for the youth target audience.</p>
         </div>
-        <img class="imageRight" src="./media/photos/illustrations/burger-@1x.jpg" alt="Photograph of a burger box" srcset="./media/photos/illustrations/burger-@2x.jpg 2x, ./media/photos/illustrations/burger-@1x.jpg 1x">
+        <img class="imageRight" src="./media/photos/illustrations/burger-@1x.jpg" alt="Photograph of a burger box"
+          srcset="./media/photos/illustrations/burger-@2x.jpg 2x, ./media/photos/illustrations/burger-@1x.jpg 1x">
       </article>
       <article class="section petiteFaimDetails2">
-        <img class="imageLeft" src="./media/photos/illustrations/devanture-@1x.jpg" alt="Photograph of the Petite Faim shop" srcset="./media/photos/illustrations/devanture-@2x.jpg 2x, ./media/photos/illustrations/devanture-@1x.jpg 1x">
+        <img class="imageLeft" src="./media/photos/illustrations/devanture-@1x.jpg" alt="Photograph of the Petite Faim shop"
+          srcset="./media/photos/illustrations/devanture-@2x.jpg 2x, ./media/photos/illustrations/devanture-@1x.jpg 1x">
         <div class="text">
-          <p>Concerning the visual, Food delivery is a business sector which grows alongside with the web and the mobile apps so I picked their design codes and adapted them to a logo.</p>
-          <p>Regarding to the values I've chosen, the visual identity had to speaks to the youth which are very accustomed with mobile and web. By using the Web Design codes this must works pretty well.</p>
-          <p>The result is a logo with very round curves and pretty bold strokes. It is composed of three different elements: a house, a chef’s hat inside this house and three bold strokes besides. The house and the chef’s hat refer to the business
+          <p>Concerning the visual, Food delivery is a business sector which grows alongside with the web and the
+            mobile apps so I picked their design codes and adapted them to a logo.</p>
+          <p>Regarding to the values I've chosen, the visual identity had to speaks to the youth which are very
+            accustomed with mobile and web. By using the Web Design codes this must works pretty well.</p>
+          <p>The result is a logo with very round curves and pretty bold strokes. It is composed of three different
+            elements: a house, a chef’s hat inside this house and three bold strokes besides. The house and the chef’s
+            hat refer to the business
             sector because Petite Faim delivers food at home and the three bold strokes refers to speed.</p>
-          <p>Concerning the color, I chose this bright green that refers to the environment which Petite Faim tries to protect.</p>
+          <p>Concerning the color, I chose this bright green that refers to the environment which Petite Faim tries to
+            protect.</p>
         </div>
       </article>
     </section>
@@ -419,15 +500,18 @@
           <path class="cls-3" d="M843.13 423.5H426.37v650.44h.09zm-352.79 65.68a3 3 0 0 1 3-3H720a3 3 0 0 1 2.52 4.62l-46.12 72a3 3 0 0 1-2.52 1.38H493.34a3 3 0 0 1-3-3zm-.16 142.15a3 3 0 0 1 3-3h135.69a3 3 0 0 1 2.52 4.61l-135.68 211.9a3 3 0 0 1-5.53-1.61z"
             transform="translate(-348.37 -345.5)" />
           <path class="cls-3" d="M728.43 78.22V78h-.34l.34.22z" />
-          <path class="cls-3" d="M752.34 1073.94h324.46V567.46zm258.16-59.1H874a3 3 0 0 1-2.52-4.62l136.21-211.56a3 3 0 0 1 5.53 1.62l.28 211.56a3 3 0 0 1-3 3z" transform="translate(-348.37 -345.5)" />
-          <path class="cls-4" d="M348.37 345.5v806.44h806.43V345.5zm728.43 78.22l-.34-.22h.34zm-.41-.22l-416.68 650.44H519.09L935.77 423.5zm-650 0h416.74l-416.67 650.44h-.09zm326 650.44l324.41-506.48v506.48z" transform="translate(-348.37 -345.5)" />
+          <path class="cls-3" d="M752.34 1073.94h324.46V567.46zm258.16-59.1H874a3 3 0 0 1-2.52-4.62l136.21-211.56a3 3 0 0 1 5.53 1.62l.28 211.56a3 3 0 0 1-3 3z"
+            transform="translate(-348.37 -345.5)" />
+          <path class="cls-4" d="M348.37 345.5v806.44h806.43V345.5zm728.43 78.22l-.34-.22h.34zm-.41-.22l-416.68 650.44H519.09L935.77 423.5zm-650 0h416.74l-416.67 650.44h-.09zm326 650.44l324.41-506.48v506.48z"
+            transform="translate(-348.37 -345.5)" />
           <path class="cls-4" d="M1007.69 798.66l-136.21 211.56a3 3 0 0 0 2.52 4.62h136.5a3 3 0 0 0 3-3l-.28-211.56a3 3 0 0 0-5.53-1.62zM495.71 844.84l135.68-211.9a3 3 0 0 0-2.52-4.61H493.18a3 3 0 0 0-3 3v211.9a3 3 0 0 0 5.53 1.61zM493.34 564.18h180.49a3 3 0 0 0 2.52-1.38l46.12-72a3 3 0 0 0-2.52-4.62H493.34a3 3 0 0 0-3 3v72a3 3 0 0 0 3 3z"
             transform="translate(-348.37 -345.5)" />
         </g>
       </svg>
       <svg id="homeIcon" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none" />
-        <path d="M10 19v-5h4v5a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h1.7a.5.5 0 0 0 .33-.87L12.67 3.6a1 1 0 0 0-1.34 0L3 11.13a.5.5 0 0 0 .3.87H5v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1z" fill="#fff" /></svg>
+        <path d="M10 19v-5h4v5a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h1.7a.5.5 0 0 0 .33-.87L12.67 3.6a1 1 0 0 0-1.34 0L3 11.13a.5.5 0 0 0 .3.87H5v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1z"
+          fill="#fff" /></svg>
     </div>
 
   </main>

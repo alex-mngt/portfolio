@@ -13,6 +13,7 @@ window.onload = function() {
   let nbSection = $("section:nth-of-type(n+2)").length;
   let scrollTo = document.getElementById("firstPage").offsetHeight;
   let urlMobile;
+  let listenScroll = false;
   // storage tables
   let tabPreview = document.querySelectorAll("section:first-of-type>article");
   let tabSection = document.querySelectorAll("body>main>section:nth-of-type(n+2)");
@@ -50,6 +51,7 @@ window.onload = function() {
         document.location.href = urlMobile;
       }
       $('#homeButton').css("opacity", "1");
+      $('.scrollAnim').css("opacity", "1");
       if (elmnt == "#moveDown") {
         $('#moveDown').css("animation", "scrollButtonDown 0.6s ease-out forwards");
       }
@@ -86,6 +88,19 @@ window.onload = function() {
               } else if (direction == 'up') {
                 currentSection -= 1;
                 console.log("up");
+              }
+            },
+            afterLoad: function(origin, destination, direction) {
+              var loadedSection = this;
+
+              //using index
+              if (direction == "up") {
+                if (currentSection == 1) {
+                  setTimeout(function() {
+                    listenScroll = true;
+                    console.log("ui");
+                  }, 2000);
+                }
               }
             }
           });
@@ -275,11 +290,28 @@ window.onload = function() {
     }
   }
 
+  // function homePopUp() {
+  //   console.log("section 1");
+  //   document.addEventListener("wheel", function() {
+  //     scrollEvent(event);
+  //   });
+  // }
+
   document.addEventListener("wheel", function() {
-    if (currentSection == 1) {
+    if (listenScroll) {
       scrollEvent(event);
     }
   });
+
+
+
+  // document.addEventListener("wheel", function() {
+  //   if (currentSection == 1 && ) {
+  //     setTimeout(function() {
+  //       scrollEvent(event);
+  //     }, 2000);
+  //   }
+  // });
 
 
 }
